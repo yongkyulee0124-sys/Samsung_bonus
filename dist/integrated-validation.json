@@ -1,0 +1,455 @@
+{
+  "status": "planning_estimates_not_company_confirmation",
+  "results": {
+    "middle": {
+      "scenario": {
+        "name": "중간 전망",
+        "performance": {
+          "2026": 389,
+          "2027": 567,
+          "2028": 576,
+          "2029": 518,
+          "2030": 466
+        },
+        "unpaid": {},
+        "opi2Factor": 1,
+        "psuMode": "normal"
+      },
+      "totals": {
+        "grossAccrual": 4411172584,
+        "netAccrual": 2478298760,
+        "netLiquid": 1660411424,
+        "contract": 469678656,
+        "grossLiquid": 3047679620,
+        "marketAdjustment": 0,
+        "donation": 7019373,
+        "settlementTotal": 289680681,
+        "settlementInPeriod": 172285290
+      },
+      "annual": [
+        {
+          "year": 2026,
+          "salary": 66765915,
+          "opi1": 0,
+          "tai": 6057441,
+          "opi2": 0,
+          "psu": 0,
+          "settlement": 0,
+          "total": 72823356,
+          "cumulative": 72823356
+        },
+        {
+          "year": 2027,
+          "salary": 69602981,
+          "opi1": 23508665,
+          "tai": 4936820,
+          "opi2": 74065056,
+          "psu": 0,
+          "settlement": 0,
+          "total": 172113522,
+          "cumulative": 244936878
+        },
+        {
+          "year": 2028,
+          "salary": 72637630,
+          "opi1": 23955442,
+          "tai": 5030643,
+          "opi2": 187418862,
+          "psu": 26840833,
+          "settlement": 47943078,
+          "total": 363826488,
+          "cumulative": 608763366
+        },
+        {
+          "year": 2029,
+          "salary": 75831287,
+          "opi1": 25036926,
+          "tai": 5257755,
+          "opi2": 308329589,
+          "psu": 26716741,
+          "settlement": 61126471,
+          "total": 502298769,
+          "cumulative": 1111062135
+        },
+        {
+          "year": 2030,
+          "salary": 79165624,
+          "opi1": 26290912,
+          "tai": 5521091,
+          "opi2": 348437006,
+          "psu": 26718915,
+          "settlement": 63215741,
+          "total": 549349289,
+          "cumulative": 1660411424
+        }
+      ],
+      "locked": {
+        "unpaidStock": 323540101,
+        "paidLockedStock": 349255673,
+        "totalStock": 672795774,
+        "unpaidCash": 145091562,
+        "normalUnpaidCash": 27696171,
+        "settlementAfterPeriod": 117395391,
+        "settlementReceivable": 117401019,
+        "settlementPayable": 5628,
+        "settlementEvents": [
+          {
+            "id": "1:2029:opi2:tax",
+            "origin": 2029,
+            "payYear": 2030,
+            "year": 2031,
+            "type": "settlement",
+            "kind": "tax",
+            "net": 59728526,
+            "gross": 59728526,
+            "assumptionOnly": true
+          },
+          {
+            "id": "1:2029:opi2:insurance",
+            "origin": 2029,
+            "payYear": 2030,
+            "year": 2031,
+            "type": "settlement",
+            "kind": "insurance",
+            "net": -2894,
+            "gross": -2894,
+            "assumptionOnly": true
+          },
+          {
+            "id": "1:2030:opi2:tax",
+            "origin": 2030,
+            "payYear": 2031,
+            "year": 2032,
+            "type": "settlement",
+            "kind": "tax",
+            "net": 57672493,
+            "gross": 57672493,
+            "assumptionOnly": true
+          },
+          {
+            "id": "1:2030:opi2:insurance",
+            "origin": 2030,
+            "payYear": 2031,
+            "year": 2032,
+            "type": "settlement",
+            "kind": "insurance",
+            "net": -2734,
+            "gross": -2734,
+            "assumptionOnly": true
+          }
+        ]
+      },
+      "accounting": {
+        "opening": 0,
+        "netAccrual": 2478298760,
+        "netLiquid": 1660411424,
+        "closingStock": 672795774,
+        "closingCash": 145091562,
+        "difference": 0,
+        "complete": true
+      }
+    },
+    "downturn": {
+      "scenario": {
+        "name": "반도체 하락 전망",
+        "performance": {
+          "2026": 389,
+          "2027": 567,
+          "2028": 576,
+          "2029": 518,
+          "2030": 466
+        },
+        "unpaid": {
+          "2028": true,
+          "2029": true
+        },
+        "opi2Factor": 1,
+        "psuMode": "normal"
+      },
+      "totals": {
+        "grossAccrual": 2855463499,
+        "netAccrual": 1663571848,
+        "netLiquid": 1254665817,
+        "contract": 469678656,
+        "grossLiquid": 2199177384,
+        "marketAdjustment": 0,
+        "donation": 3907955,
+        "settlementTotal": 166739308,
+        "settlementInPeriod": 109069549
+      },
+      "annual": [
+        {
+          "year": 2026,
+          "salary": 66765915,
+          "opi1": 0,
+          "tai": 6057441,
+          "opi2": 0,
+          "psu": 0,
+          "settlement": 0,
+          "total": 72823356,
+          "cumulative": 72823356
+        },
+        {
+          "year": 2027,
+          "salary": 69602981,
+          "opi1": 23508665,
+          "tai": 4936820,
+          "opi2": 74065056,
+          "psu": 0,
+          "settlement": 0,
+          "total": 172113522,
+          "cumulative": 244936878
+        },
+        {
+          "year": 2028,
+          "salary": 72637630,
+          "opi1": 23955442,
+          "tai": 5030643,
+          "opi2": 187418862,
+          "psu": 26840833,
+          "settlement": 47943078,
+          "total": 363826488,
+          "cumulative": 608763366
+        },
+        {
+          "year": 2029,
+          "salary": 75831287,
+          "opi1": 28128384,
+          "tai": 5906961,
+          "opi2": 187418862,
+          "psu": 30015615,
+          "settlement": 61126471,
+          "total": 388427580,
+          "cumulative": 997190946
+        },
+        {
+          "year": 2030,
+          "salary": 79165624,
+          "opi1": 29176678,
+          "tai": 6127103,
+          "opi2": 113353806,
+          "psu": 29651660,
+          "settlement": 0,
+          "total": 257474871,
+          "cumulative": 1254665817
+        }
+      ],
+      "locked": {
+        "unpaidStock": 323540101,
+        "paidLockedStock": 0,
+        "totalStock": 323540101,
+        "unpaidCash": 85365930,
+        "normalUnpaidCash": 27696171,
+        "settlementAfterPeriod": 57669759,
+        "settlementReceivable": 57672493,
+        "settlementPayable": 2734,
+        "settlementEvents": [
+          {
+            "id": "1:2029:opi2:tax",
+            "origin": 2029,
+            "payYear": 2030,
+            "year": 2031,
+            "type": "settlement",
+            "kind": "tax",
+            "net": 0,
+            "gross": 0,
+            "assumptionOnly": true
+          },
+          {
+            "id": "1:2029:opi2:insurance",
+            "origin": 2029,
+            "payYear": 2030,
+            "year": 2031,
+            "type": "settlement",
+            "kind": "insurance",
+            "net": 0,
+            "gross": 0,
+            "assumptionOnly": true
+          },
+          {
+            "id": "1:2030:opi2:tax",
+            "origin": 2030,
+            "payYear": 2031,
+            "year": 2032,
+            "type": "settlement",
+            "kind": "tax",
+            "net": 57672493,
+            "gross": 57672493,
+            "assumptionOnly": true
+          },
+          {
+            "id": "1:2030:opi2:insurance",
+            "origin": 2030,
+            "payYear": 2031,
+            "year": 2032,
+            "type": "settlement",
+            "kind": "insurance",
+            "net": -2734,
+            "gross": -2734,
+            "assumptionOnly": true
+          }
+        ]
+      },
+      "accounting": {
+        "opening": 0,
+        "netAccrual": 1663571848,
+        "netLiquid": 1254665817,
+        "closingStock": 323540101,
+        "closingCash": 85365930,
+        "difference": 0,
+        "complete": true
+      }
+    },
+    "downturnZero": {
+      "scenario": {
+        "name": "반도체 하락 전망",
+        "performance": {
+          "2026": 389,
+          "2027": 567,
+          "2028": 576,
+          "2029": 518,
+          "2030": 466
+        },
+        "unpaid": {
+          "2028": true,
+          "2029": true
+        },
+        "opi2Factor": 1,
+        "psuMode": "zero"
+      },
+      "totals": {
+        "grossAccrual": 2705463499,
+        "netAccrual": 1580589101,
+        "netLiquid": 1171683070,
+        "contract": 469678656,
+        "grossLiquid": 2050368691,
+        "marketAdjustment": 0,
+        "donation": 3907955,
+        "settlementTotal": 167930615,
+        "settlementInPeriod": 110260856
+      },
+      "annual": [
+        {
+          "year": 2026,
+          "salary": 66765915,
+          "opi1": 0,
+          "tai": 6057441,
+          "opi2": 0,
+          "psu": 0,
+          "settlement": 0,
+          "total": 72823356,
+          "cumulative": 72823356
+        },
+        {
+          "year": 2027,
+          "salary": 69602981,
+          "opi1": 23508665,
+          "tai": 4936820,
+          "opi2": 74065056,
+          "psu": 0,
+          "settlement": 0,
+          "total": 172113522,
+          "cumulative": 244936878
+        },
+        {
+          "year": 2028,
+          "salary": 72637630,
+          "opi1": 24026312,
+          "tai": 5045525,
+          "opi2": 187418862,
+          "psu": 0,
+          "settlement": 47943078,
+          "total": 337071407,
+          "cumulative": 582008285
+        },
+        {
+          "year": 2029,
+          "salary": 75831287,
+          "opi1": 29112147,
+          "tai": 6113551,
+          "opi2": 187418862,
+          "psu": 0,
+          "settlement": 62317778,
+          "total": 360793625,
+          "cumulative": 942801910
+        },
+        {
+          "year": 2030,
+          "salary": 79165624,
+          "opi1": 30051016,
+          "tai": 6310714,
+          "opi2": 113353806,
+          "psu": 0,
+          "settlement": 0,
+          "total": 228881160,
+          "cumulative": 1171683070
+        }
+      ],
+      "locked": {
+        "unpaidStock": 323540101,
+        "paidLockedStock": 0,
+        "totalStock": 323540101,
+        "unpaidCash": 85365930,
+        "normalUnpaidCash": 27696171,
+        "settlementAfterPeriod": 57669759,
+        "settlementReceivable": 57672493,
+        "settlementPayable": 2734,
+        "settlementEvents": [
+          {
+            "id": "1:2029:opi2:tax",
+            "origin": 2029,
+            "payYear": 2030,
+            "year": 2031,
+            "type": "settlement",
+            "kind": "tax",
+            "net": 0,
+            "gross": 0,
+            "assumptionOnly": true
+          },
+          {
+            "id": "1:2029:opi2:insurance",
+            "origin": 2029,
+            "payYear": 2030,
+            "year": 2031,
+            "type": "settlement",
+            "kind": "insurance",
+            "net": 0,
+            "gross": 0,
+            "assumptionOnly": true
+          },
+          {
+            "id": "1:2030:opi2:tax",
+            "origin": 2030,
+            "payYear": 2031,
+            "year": 2032,
+            "type": "settlement",
+            "kind": "tax",
+            "net": 57672493,
+            "gross": 57672493,
+            "assumptionOnly": true
+          },
+          {
+            "id": "1:2030:opi2:insurance",
+            "origin": 2030,
+            "payYear": 2031,
+            "year": 2032,
+            "type": "settlement",
+            "kind": "insurance",
+            "net": -2734,
+            "gross": -2734,
+            "assumptionOnly": true
+          }
+        ]
+      },
+      "accounting": {
+        "opening": 0,
+        "netAccrual": 1580589101,
+        "netLiquid": 1171683070,
+        "closingStock": 323540101,
+        "closingCash": 85365930,
+        "difference": 0,
+        "complete": true
+      }
+    }
+  }
+}
