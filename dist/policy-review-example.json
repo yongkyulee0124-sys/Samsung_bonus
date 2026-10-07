@@ -5,86 +5,12 @@
     "dataStartYear": 2026,
     "mode": "individual",
     "startYear": 2026,
-    "endYear": 2026,
+    "endYear": 2030,
     "activeScenario": "middle",
     "opi2Policy": {
-      "version": 1,
-      "mode": "review",
-      "rateSource": "direct",
-      "workBonusDefinition": "confirmed_separate",
-      "reportedSharesDefinition": "gross_equivalent",
-      "taxWithholdingBase": "employment_income",
-      "insuranceWithholdingBase": "gross",
-      "repeatFutureYears": true,
-      "rateScope": "personal",
-      "withholdingTaxRate": 0.495,
-      "withholdingInsuranceRate": 0.04967,
-      "donationRate": 0.002,
-      "taxSettlementDelay": 1,
-      "insuranceSettlementDelay": 1,
-      "taxSettlementYearByOrigin": {},
-      "insuranceSettlementYearByOrigin": {},
-      "gradeByYear": {
-        "2026": "CL3",
-        "2027": "CL3",
-        "2028": "CL3",
-        "2029": "CL3",
-        "2030": "CL3"
-      },
-      "ratingByYear": {},
-      "workBonusByYear": {
-        "2026": 15000000,
-        "2027": 0,
-        "2028": 0,
-        "2029": 0,
-        "2030": 0
-      },
-      "paymentRateByYear": {
-        "2026": 1
-      },
-      "paymentDateByYear": {
-        "2026": "2027-04-01",
-        "2027": "2028-04-01",
-        "2028": "2029-04-01",
-        "2029": "2030-04-01",
-        "2030": "2031-04-01"
-      },
-      "paymentDateConfirmedByYear": {},
-      "expectedPaymentYearByYear": {
-        "2026": 2027,
-        "2027": 2028,
-        "2028": 2029,
-        "2029": 2030,
-        "2030": 2031
-      },
-      "vwapWeekByYear": {
-        "2026": 100000,
-        "2027": 250000,
-        "2028": 250000,
-        "2029": 250000,
-        "2030": 250000
-      },
-      "vwapMonthByYear": {
-        "2026": 100000,
-        "2027": 250000,
-        "2028": 250000,
-        "2029": 250000,
-        "2030": 250000
-      },
-      "vwapTwoMonthsByYear": {
-        "2026": 100000,
-        "2027": 250000,
-        "2028": 250000,
-        "2029": 250000,
-        "2030": 250000
-      },
-      "closingPriceByYear": {
-        "2026": 120000,
-        "2027": 250000,
-        "2028": 250000,
-        "2029": 250000,
-        "2030": 250000
-      }
+      "simpleInput": true,
+      "manualGrossByYear": {},
+      "donationRate": 0.002
     },
     "display": {
       "format": "korean",
@@ -244,7 +170,6 @@
       }
     }
   },
-  "resultModel": "policy_integrated_estimate",
   "assumptions": {
     "settings": {
       "growth": 0.05,
@@ -335,1556 +260,28 @@
       "warningTolerance": 0.01
     },
     "policy": {
-      "version": 1,
-      "mode": "review",
-      "rateSource": "direct",
-      "workBonusDefinition": "confirmed_separate",
-      "reportedSharesDefinition": "gross_equivalent",
-      "taxWithholdingBase": "employment_income",
-      "insuranceWithholdingBase": "gross",
-      "repeatFutureYears": true,
-      "rateScope": "personal",
+      "simpleInput": true,
+      "manualGrossByYear": {},
+      "donationRate": 0.002,
+      "workBonus": 0,
       "withholdingTaxRate": 0.495,
       "withholdingInsuranceRate": 0.04967,
-      "donationRate": 0.002,
-      "taxSettlementDelay": 1,
-      "insuranceSettlementDelay": 1,
-      "taxSettlementYearByOrigin": {},
-      "insuranceSettlementYearByOrigin": {},
-      "gradeByYear": {
-        "2026": "CL3",
-        "2027": "CL3",
-        "2028": "CL3",
-        "2029": "CL3",
-        "2030": "CL3"
-      },
-      "ratingByYear": {},
-      "workBonusByYear": {
-        "2026": 15000000,
-        "2027": 0,
-        "2028": 0,
-        "2029": 0,
-        "2030": 0
-      },
-      "paymentRateByYear": {
-        "2026": 1
-      },
-      "paymentDateByYear": {
-        "2026": "2027-04-01",
-        "2027": "2028-04-01",
-        "2028": "2029-04-01",
-        "2029": "2030-04-01",
-        "2030": "2031-04-01"
-      },
-      "paymentDateConfirmedByYear": {},
-      "expectedPaymentYearByYear": {
-        "2026": 2027,
-        "2027": 2028,
-        "2028": 2029,
-        "2029": 2030,
-        "2030": 2031
-      },
-      "vwapWeekByYear": {
-        "2026": 100000,
-        "2027": 250000,
-        "2028": 250000,
-        "2029": 250000,
-        "2030": 250000
-      },
-      "vwapMonthByYear": {
-        "2026": 100000,
-        "2027": 250000,
-        "2028": 250000,
-        "2029": 250000,
-        "2030": 250000
-      },
-      "vwapTwoMonthsByYear": {
-        "2026": 100000,
-        "2027": 250000,
-        "2028": 250000,
-        "2029": 250000,
-        "2030": 250000
-      },
-      "closingPriceByYear": {
-        "2026": 120000,
-        "2027": 250000,
-        "2028": 250000,
-        "2029": 250000,
-        "2030": 250000
-      }
+      "withholdingBase": "gross",
+      "donationBase": "gross",
+      "price": 250000,
+      "priceAssumption": "하나의 평가가격 유지",
+      "paymentAssumption": "성과 다음 해 4월 1일 예정",
+      "stockRelease": "지급해/1년 뒤/2년 뒤 각 1/3",
+      "cashSettlement": "과세 다음 해 현금 정산",
+      "manualAward": "고과·소속·연수 등이 이미 반영된 최종 세전액; 추가 배수 없음"
     },
     "period": {
       "start": 2026,
-      "end": 2026
+      "end": 2030
     },
     "confirmedAnnualTotals": null,
     "confirmedLiquidCashflow": null,
     "disclaimer": "예상치이며 실제 지급액·세금과 다를 수 있음 공제전 주수·선징수 기준·미래 반복·최종 세금 및 정산은 선택한 추정 가정. 지급일 종가 유지 매각 가정. 실제 보험료 결정/정산 및 원천징수 시차·연말정산 공제는 미반영."
-  },
-  "people": [
-    {
-      "person": {
-        "id": "1",
-        "name": "사용자",
-        "division": "공통",
-        "grade": "CL3·CL4",
-        "salary": 85000000,
-        "growth": 0.05,
-        "cap": 0,
-        "allowance": 0,
-        "includeAllowance": false,
-        "salaries": {},
-        "growthByYear": {},
-        "study": {},
-        "includePSU": true,
-        "psuMultiplier": 2,
-        "psuPrice": 250000,
-        "psuLock": 0
-      },
-      "accrual": [
-        {
-          "year": 2026,
-          "salary": 85000000,
-          "allowance": 0,
-          "gross": {
-            "salary": 85000000,
-            "opi1": 42500000,
-            "tai": 8500000,
-            "opi2": 100000000,
-            "psu": 0,
-            "settlement": 0
-          },
-          "net": {
-            "salary": 66765915,
-            "opi1": 25291890,
-            "tai": 6057441,
-            "opi2": 58298996,
-            "psu": 0,
-            "settlement": 0
-          },
-          "details": [
-            {
-              "id": "1:2026:opi1",
-              "personId": "1",
-              "type": "opi1",
-              "origin": 2026,
-              "payYear": 2027,
-              "gross": 42500000,
-              "taxableIncome": 42500000,
-              "liquidYears": [
-                2027
-              ],
-              "finalTaxEstimate": 15096972,
-              "finalInsuranceEstimate": 2111138,
-              "deduction": 17208110,
-              "net": 25291890,
-              "tranches": [
-                {
-                  "id": "1:2026:opi1:0",
-                  "year": 2027,
-                  "net": 25291890,
-                  "gross": 42500000,
-                  "origin": 2026,
-                  "payYear": 2027,
-                  "type": "opi1"
-                }
-              ]
-            },
-            {
-              "id": "1:2026:tai",
-              "personId": "1",
-              "type": "tai",
-              "origin": 2026,
-              "payYear": 2026,
-              "gross": 8500000,
-              "taxableIncome": 8500000,
-              "liquidYears": [
-                2026
-              ],
-              "finalTaxEstimate": 2020332,
-              "finalInsuranceEstimate": 422227,
-              "deduction": 2442559,
-              "net": 6057441,
-              "tranches": [
-                {
-                  "id": "1:2026:tai:0",
-                  "year": 2026,
-                  "net": 6057441,
-                  "gross": 8500000,
-                  "origin": 2026,
-                  "payYear": 2026,
-                  "type": "tai"
-                }
-              ]
-            },
-            {
-              "id": "1:2026:opi2",
-              "personId": "1",
-              "type": "opi2",
-              "origin": 2026,
-              "payYear": 2027,
-              "gross": 100000000,
-              "taxableIncome": 120000000,
-              "liquidYears": [
-                2027,
-                2028,
-                2029
-              ],
-              "reason": null,
-              "paymentDate": "2027-04-01",
-              "assumedDelivery": true,
-              "snapshot": {
-                "assumptionOnly": true,
-                "reportedSharesDefinitionConfirmed": false,
-                "gross": 100000000,
-                "benchmarkStockBudget": 35433000,
-                "reportedFractionalShares": 1000,
-                "estimatedNetFractionalShares": 354.33,
-                "actualDeliveredShares": null,
-                "reportedEmploymentIncome": 120000000,
-                "withheldTax": 59400000,
-                "withheldInsurance": 4967000,
-                "donation": 200000,
-                "referencePrice": {
-                  "numerator": 300000,
-                  "denominator": 3
-                },
-                "deliveryClose": 120000,
-                "estimatedStockMarketValue": 42519600,
-                "fundingShortfall": 0,
-                "salePriceAssumption": "지급일 종가 유지 매각 가정"
-              },
-              "policyRow": {
-                "originYear": 2026,
-                "basisYear": 2026,
-                "basisModel": "사용자 제공 2026 기초금액 조건",
-                "futureAssumption": false,
-                "contractSalary": 85000000,
-                "workBonus": 15000000,
-                "workBonusInputPurpose": "전년도 성과에 따라 지급되는 업무성과급 · 특별성과급 기초금액 전용 입력, 별도 현금항목으로 재합산하지 않음",
-                "basis": 100000000,
-                "grade": "CL3",
-                "rating": null,
-                "gradeMultiplier": 1,
-                "rate": 1,
-                "rateScope": "personal",
-                "divisionMultiplier": 1,
-                "studyMultiplier": 1,
-                "preliminaryGross": 100000000,
-                "withholding": null,
-                "grossDeductionExample": {
-                  "gross": 100000000,
-                  "tax": 49500000,
-                  "insurance": 4967000,
-                  "donation": 200000,
-                  "stockBudget": 45333000,
-                  "withholdingTotal": 54467000,
-                  "deductionTotal": 54667000,
-                  "pensionIncluded": false,
-                  "finalAnnualTax": null,
-                  "finalAnnualInsurance": null,
-                  "laterRefundOrExtraCharge": null,
-                  "settlementDate": null
-                },
-                "withholdingAlternatives": [
-                  {
-                    "key": "gross_reported_insurance_gross",
-                    "name": "가정 A: 공제전 환산주수 신고 · 세금 종가 근로소득 Y · 보험 총 지급액 G",
-                    "assumptionOnly": true,
-                    "confirmed": false,
-                    "reportedFractionalShares": 1000,
-                    "reportedEmploymentIncomeExample": 120000000,
-                    "tax": 59400000,
-                    "insurance": 4967000,
-                    "insuranceBase": "gross",
-                    "donation": 200000,
-                    "stockBudget": 35433000,
-                    "unfundedDeduction": 0,
-                    "netFractionalShares": 354.33,
-                    "actualDeliveredShares": null,
-                    "finalAnnualTax": null,
-                    "laterCashSettlement": null,
-                    "releaseExamples": [
-                      {
-                        "availableDate": "2027-04-01",
-                        "amount": 11811000
-                      },
-                      {
-                        "availableDate": "2028-04-01",
-                        "amount": 11811000
-                      },
-                      {
-                        "availableDate": "2029-04-01",
-                        "amount": 11811000
-                      }
-                    ],
-                    "reportedDefinition": "gross_equivalent",
-                    "taxBase": "employment_income"
-                  },
-                  {
-                    "key": "net_reported_insurance_gross",
-                    "name": "가정 B: 공제후 환산주수 신고 · 세금 Y · 보험 G",
-                    "assumptionOnly": true,
-                    "confirmed": false,
-                    "reportedFractionalShares": 594.9372647427855,
-                    "reportedEmploymentIncomeExample": 71392472,
-                    "tax": 35339274,
-                    "insurance": 4967000,
-                    "insuranceBase": "gross",
-                    "donation": 200000,
-                    "stockBudget": 59493726,
-                    "unfundedDeduction": 0,
-                    "netFractionalShares": 594.93726,
-                    "actualDeliveredShares": null,
-                    "finalAnnualTax": null,
-                    "laterCashSettlement": null,
-                    "releaseExamples": [
-                      {
-                        "availableDate": "2027-04-01",
-                        "amount": 19831242
-                      },
-                      {
-                        "availableDate": "2028-04-01",
-                        "amount": 19831242
-                      },
-                      {
-                        "availableDate": "2029-04-01",
-                        "amount": 19831242
-                      }
-                    ],
-                    "reportedDefinition": "net_delivered",
-                    "taxBase": "employment_income"
-                  },
-                  {
-                    "key": "net_reported_insurance_income",
-                    "name": "가정 C: 공제후 환산주수 신고 · 세금 Y · 보험 Y",
-                    "assumptionOnly": true,
-                    "confirmed": false,
-                    "reportedFractionalShares": 603.5302285190409,
-                    "reportedEmploymentIncomeExample": 72423627,
-                    "tax": 35849695,
-                    "insurance": 3597282,
-                    "insuranceBase": "employment_income",
-                    "donation": 200000,
-                    "stockBudget": 60353023,
-                    "unfundedDeduction": 0,
-                    "netFractionalShares": 603.53023,
-                    "actualDeliveredShares": null,
-                    "finalAnnualTax": null,
-                    "laterCashSettlement": null,
-                    "releaseExamples": [
-                      {
-                        "availableDate": "2027-04-01",
-                        "amount": 20117675
-                      },
-                      {
-                        "availableDate": "2028-04-01",
-                        "amount": 20117674
-                      },
-                      {
-                        "availableDate": "2029-04-01",
-                        "amount": 20117674
-                      }
-                    ],
-                    "reportedDefinition": "net_delivered",
-                    "taxBase": "employment_income"
-                  },
-                  {
-                    "key": "gross_equivalent_gross_gross",
-                    "name": "공제전 환산주수 신고 · 세금 G · 보험 G",
-                    "assumptionOnly": true,
-                    "confirmed": false,
-                    "reportedFractionalShares": 1000,
-                    "reportedEmploymentIncomeExample": 120000000,
-                    "tax": 49500000,
-                    "insurance": 4967000,
-                    "insuranceBase": "gross",
-                    "donation": 200000,
-                    "stockBudget": 45333000,
-                    "unfundedDeduction": 0,
-                    "netFractionalShares": 453.33,
-                    "actualDeliveredShares": null,
-                    "finalAnnualTax": null,
-                    "laterCashSettlement": null,
-                    "releaseExamples": [
-                      {
-                        "availableDate": "2027-04-01",
-                        "amount": 15111000
-                      },
-                      {
-                        "availableDate": "2028-04-01",
-                        "amount": 15111000
-                      },
-                      {
-                        "availableDate": "2029-04-01",
-                        "amount": 15111000
-                      }
-                    ],
-                    "reportedDefinition": "gross_equivalent",
-                    "taxBase": "gross"
-                  },
-                  {
-                    "key": "gross_equivalent_gross_employment_income",
-                    "name": "공제전 환산주수 신고 · 세금 G · 보험 Y",
-                    "assumptionOnly": true,
-                    "confirmed": false,
-                    "reportedFractionalShares": 1000,
-                    "reportedEmploymentIncomeExample": 120000000,
-                    "tax": 49500000,
-                    "insurance": 5960400,
-                    "insuranceBase": "employment_income",
-                    "donation": 200000,
-                    "stockBudget": 44339600,
-                    "unfundedDeduction": 0,
-                    "netFractionalShares": 443.396,
-                    "actualDeliveredShares": null,
-                    "finalAnnualTax": null,
-                    "laterCashSettlement": null,
-                    "releaseExamples": [
-                      {
-                        "availableDate": "2027-04-01",
-                        "amount": 14779867
-                      },
-                      {
-                        "availableDate": "2028-04-01",
-                        "amount": 14779867
-                      },
-                      {
-                        "availableDate": "2029-04-01",
-                        "amount": 14779866
-                      }
-                    ],
-                    "reportedDefinition": "gross_equivalent",
-                    "taxBase": "gross"
-                  },
-                  {
-                    "key": "gross_equivalent_employment_income_employment_income",
-                    "name": "공제전 환산주수 신고 · 세금 Y · 보험 Y",
-                    "assumptionOnly": true,
-                    "confirmed": false,
-                    "reportedFractionalShares": 1000,
-                    "reportedEmploymentIncomeExample": 120000000,
-                    "tax": 59400000,
-                    "insurance": 5960400,
-                    "insuranceBase": "employment_income",
-                    "donation": 200000,
-                    "stockBudget": 34439600,
-                    "unfundedDeduction": 0,
-                    "netFractionalShares": 344.396,
-                    "actualDeliveredShares": null,
-                    "finalAnnualTax": null,
-                    "laterCashSettlement": null,
-                    "releaseExamples": [
-                      {
-                        "availableDate": "2027-04-01",
-                        "amount": 11479867
-                      },
-                      {
-                        "availableDate": "2028-04-01",
-                        "amount": 11479867
-                      },
-                      {
-                        "availableDate": "2029-04-01",
-                        "amount": 11479866
-                      }
-                    ],
-                    "reportedDefinition": "gross_equivalent",
-                    "taxBase": "employment_income"
-                  },
-                  {
-                    "key": "net_delivered_gross_gross",
-                    "name": "공제후 환산주수 신고 · 세금 G · 보험 G",
-                    "assumptionOnly": true,
-                    "confirmed": false,
-                    "reportedFractionalShares": 453.33,
-                    "reportedEmploymentIncomeExample": 54399600,
-                    "tax": 49500000,
-                    "insurance": 4967000,
-                    "insuranceBase": "gross",
-                    "donation": 200000,
-                    "stockBudget": 45333000,
-                    "unfundedDeduction": 0,
-                    "netFractionalShares": 453.33,
-                    "actualDeliveredShares": null,
-                    "finalAnnualTax": null,
-                    "laterCashSettlement": null,
-                    "releaseExamples": [
-                      {
-                        "availableDate": "2027-04-01",
-                        "amount": 15111000
-                      },
-                      {
-                        "availableDate": "2028-04-01",
-                        "amount": 15111000
-                      },
-                      {
-                        "availableDate": "2029-04-01",
-                        "amount": 15111000
-                      }
-                    ],
-                    "reportedDefinition": "net_delivered",
-                    "taxBase": "gross"
-                  },
-                  {
-                    "key": "net_delivered_gross_employment_income",
-                    "name": "공제후 환산주수 신고 · 세금 G · 보험 Y",
-                    "assumptionOnly": true,
-                    "confirmed": false,
-                    "reportedFractionalShares": 474.70564475030295,
-                    "reportedEmploymentIncomeExample": 56964677,
-                    "tax": 49500000,
-                    "insurance": 2829436,
-                    "insuranceBase": "employment_income",
-                    "donation": 200000,
-                    "stockBudget": 47470564,
-                    "unfundedDeduction": 0,
-                    "netFractionalShares": 474.70564,
-                    "actualDeliveredShares": null,
-                    "finalAnnualTax": null,
-                    "laterCashSettlement": null,
-                    "releaseExamples": [
-                      {
-                        "availableDate": "2027-04-01",
-                        "amount": 15823522
-                      },
-                      {
-                        "availableDate": "2028-04-01",
-                        "amount": 15823521
-                      },
-                      {
-                        "availableDate": "2029-04-01",
-                        "amount": 15823521
-                      }
-                    ],
-                    "reportedDefinition": "net_delivered",
-                    "taxBase": "gross"
-                  }
-                ],
-                "selectedWithholdingScenario": {
-                  "key": "gross_reported_insurance_gross",
-                  "name": "가정 A: 공제전 환산주수 신고 · 세금 종가 근로소득 Y · 보험 총 지급액 G",
-                  "assumptionOnly": true,
-                  "confirmed": false,
-                  "reportedFractionalShares": 1000,
-                  "reportedEmploymentIncomeExample": 120000000,
-                  "tax": 59400000,
-                  "insurance": 4967000,
-                  "insuranceBase": "gross",
-                  "donation": 200000,
-                  "stockBudget": 35433000,
-                  "unfundedDeduction": 0,
-                  "netFractionalShares": 354.33,
-                  "actualDeliveredShares": null,
-                  "finalAnnualTax": null,
-                  "laterCashSettlement": null,
-                  "releaseExamples": [
-                    {
-                      "availableDate": "2027-04-01",
-                      "amount": 11811000
-                    },
-                    {
-                      "availableDate": "2028-04-01",
-                      "amount": 11811000
-                    },
-                    {
-                      "availableDate": "2029-04-01",
-                      "amount": 11811000
-                    }
-                  ],
-                  "reportedDefinition": "gross_equivalent",
-                  "taxBase": "employment_income"
-                },
-                "reportedSharesDefinitionConfirmed": false,
-                "prices": {
-                  "vwapWeek": 100000,
-                  "vwapMonth": 100000,
-                  "vwapTwoMonths": 100000,
-                  "mean": {
-                    "numerator": 300000,
-                    "denominator": 3
-                  },
-                  "closingPrice": 120000,
-                  "salePriceAssumption": "지급일 종가 유지 매각 가정"
-                },
-                "shares": {
-                  "fractionalGrossShares": 1000,
-                  "fractionalNetShares": 354.33,
-                  "actualDeliveredShares": null,
-                  "roundingPolicy": "미확인",
-                  "reportedDefinition": "gross_equivalent"
-                },
-                "shareIncomeCandidates": {
-                  "grossEquivalent": 120000000,
-                  "netDeliveredEquivalent": 42519600,
-                  "note": "선택 공제 가정의 정의 비교. 실제 주식수·신고소득 확정 아님."
-                },
-                "reportedEmploymentIncome": null,
-                "confirmedIncomeReportYear": null,
-                "payment": {
-                  "actualDate": null,
-                  "assumedDate": "2027-04-01",
-                  "expectedYear": 2027,
-                  "expectedWindow": "3월말~4월초 · 정기 주총 의결 이후",
-                  "exactDateConfirmed": false
-                },
-                "releases": [
-                  {
-                    "tranche": 1,
-                    "availableDate": null,
-                    "assumedAvailableDate": "2027-04-01",
-                    "expectedYear": 2027,
-                    "amount": null,
-                    "valuationOnly": true,
-                    "confirmedDate": false
-                  },
-                  {
-                    "tranche": 2,
-                    "availableDate": null,
-                    "assumedAvailableDate": "2028-04-01",
-                    "expectedYear": 2028,
-                    "amount": null,
-                    "valuationOnly": true,
-                    "confirmedDate": false
-                  },
-                  {
-                    "tranche": 3,
-                    "availableDate": null,
-                    "assumedAvailableDate": "2029-04-01",
-                    "expectedYear": 2029,
-                    "amount": null,
-                    "valuationOnly": true,
-                    "confirmedDate": false
-                  }
-                ],
-                "pending": true,
-                "reasons": [
-                  "공제전 환산주수 해석은 합리적 추론·기본 가정이며 회사 계산예시 확인 대기",
-                  "49.5% 세금·4.967% 보험료의 G 또는 종가 근로소득 Y 산정기준 확인 대기",
-                  "실제 지급일 미확정: 3월말~4월초 예상 (정기 주총 의결 이후)",
-                  "실제 입고주수·최종 세무 정산 모델 확인 대기"
-                ],
-                "confirmedCompensation": null,
-                "confirmedLiquidCashflow": null,
-                "rateSource": "direct",
-                "zeroReason": null,
-                "expectedRateIsEstimate": false
-              },
-              "finalTaxEstimate": 42626745,
-              "finalInsuranceEstimate": 5960859,
-              "deduction": 48587604,
-              "identity": {
-                "costIdentity": {
-                  "gross": 100000000,
-                  "donation": 200000,
-                  "withheldTax": 59400000,
-                  "withheldInsurance": 4967000,
-                  "stockBudget": 35433000,
-                  "difference": 0
-                },
-                "marketAdjustment": 7086600,
-                "settlementTax": 16773255,
-                "settlementInsurance": -993859,
-                "finalEconomicValue": 58298996,
-                "valuationIdentityDifference": 0
-              },
-              "marketAdjustment": 7086600,
-              "net": 58298996,
-              "settlements": [
-                {
-                  "id": "1:2026:opi2:tax",
-                  "origin": 2026,
-                  "payYear": 2027,
-                  "year": 2028,
-                  "type": "settlement",
-                  "kind": "tax",
-                  "net": 16773255,
-                  "gross": 16773255,
-                  "assumptionOnly": true
-                },
-                {
-                  "id": "1:2026:opi2:insurance",
-                  "origin": 2026,
-                  "payYear": 2027,
-                  "year": 2028,
-                  "type": "settlement",
-                  "kind": "insurance",
-                  "net": -993859,
-                  "gross": -993859,
-                  "assumptionOnly": true
-                }
-              ],
-              "tranches": [
-                {
-                  "id": "1:2026:opi2:stock:0",
-                  "year": 2027,
-                  "net": 14173200,
-                  "gross": 33333334,
-                  "origin": 2026,
-                  "payYear": 2027,
-                  "type": "opi2",
-                  "availableDate": "2027-04-01",
-                  "assumptionOnly": true
-                },
-                {
-                  "id": "1:2026:opi2:stock:1",
-                  "year": 2028,
-                  "net": 14173200,
-                  "gross": 33333333,
-                  "origin": 2026,
-                  "payYear": 2027,
-                  "type": "opi2",
-                  "availableDate": "2028-04-01",
-                  "assumptionOnly": true
-                },
-                {
-                  "id": "1:2026:opi2:stock:2",
-                  "year": 2029,
-                  "net": 14173200,
-                  "gross": 33333333,
-                  "origin": 2026,
-                  "payYear": 2027,
-                  "type": "opi2",
-                  "availableDate": "2029-04-01",
-                  "assumptionOnly": true
-                }
-              ]
-            }
-          ],
-          "reasons": [
-            "미확정 정책 · 선택한 가정에 따른 OPI2 추정"
-          ],
-          "baseTax": {
-            "gross": 85000000,
-            "year": 2026,
-            "deduction": 14000000,
-            "taxable": 63084124,
-            "income": 9380190,
-            "local": 938019,
-            "pension": 3693600,
-            "pensionRate": 0.0475,
-            "pensionCap": 77760000,
-            "health": 3055750,
-            "care": 401526,
-            "employment": 765000,
-            "insurance": 7915876,
-            "total": 18234085
-          },
-          "opi2StockMarketValue": 42519600,
-          "opi2SettlementEconomic": 15779396,
-          "netTotal": 156414242,
-          "grossTotal": 236000000,
-          "netStock": 42519600,
-          "netCash": 113894642,
-          "lockedStock": 42519600
-        }
-      ],
-      "cashflow": [
-        {
-          "year": 2026,
-          "salary": 0,
-          "allowance": 0,
-          "gross": {
-            "salary": 85000000,
-            "opi1": 0,
-            "tai": 8500000,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "net": {
-            "salary": 66765915,
-            "opi1": 0,
-            "tai": 6057441,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "details": [
-            {
-              "id": "1:2026:tai:0",
-              "year": 2026,
-              "net": 6057441,
-              "gross": 8500000,
-              "origin": 2026,
-              "payYear": 2026,
-              "type": "tai"
-            }
-          ],
-          "reasons": [],
-          "netTotal": 72823356,
-          "grossTotal": 93500000,
-          "cumulative": 72823356
-        }
-      ],
-      "events": [
-        {
-          "id": "1:2026:opi1",
-          "personId": "1",
-          "type": "opi1",
-          "origin": 2026,
-          "payYear": 2027,
-          "gross": 42500000,
-          "taxableIncome": 42500000,
-          "liquidYears": [
-            2027
-          ],
-          "finalTaxEstimate": 15096972,
-          "finalInsuranceEstimate": 2111138,
-          "deduction": 17208110,
-          "net": 25291890,
-          "tranches": [
-            {
-              "id": "1:2026:opi1:0",
-              "year": 2027,
-              "net": 25291890,
-              "gross": 42500000,
-              "origin": 2026,
-              "payYear": 2027,
-              "type": "opi1"
-            }
-          ]
-        },
-        {
-          "id": "1:2026:tai",
-          "personId": "1",
-          "type": "tai",
-          "origin": 2026,
-          "payYear": 2026,
-          "gross": 8500000,
-          "taxableIncome": 8500000,
-          "liquidYears": [
-            2026
-          ],
-          "finalTaxEstimate": 2020332,
-          "finalInsuranceEstimate": 422227,
-          "deduction": 2442559,
-          "net": 6057441,
-          "tranches": [
-            {
-              "id": "1:2026:tai:0",
-              "year": 2026,
-              "net": 6057441,
-              "gross": 8500000,
-              "origin": 2026,
-              "payYear": 2026,
-              "type": "tai"
-            }
-          ]
-        },
-        {
-          "id": "1:2026:opi2",
-          "personId": "1",
-          "type": "opi2",
-          "origin": 2026,
-          "payYear": 2027,
-          "gross": 100000000,
-          "taxableIncome": 120000000,
-          "liquidYears": [
-            2027,
-            2028,
-            2029
-          ],
-          "reason": null,
-          "paymentDate": "2027-04-01",
-          "assumedDelivery": true,
-          "snapshot": {
-            "assumptionOnly": true,
-            "reportedSharesDefinitionConfirmed": false,
-            "gross": 100000000,
-            "benchmarkStockBudget": 35433000,
-            "reportedFractionalShares": 1000,
-            "estimatedNetFractionalShares": 354.33,
-            "actualDeliveredShares": null,
-            "reportedEmploymentIncome": 120000000,
-            "withheldTax": 59400000,
-            "withheldInsurance": 4967000,
-            "donation": 200000,
-            "referencePrice": {
-              "numerator": 300000,
-              "denominator": 3
-            },
-            "deliveryClose": 120000,
-            "estimatedStockMarketValue": 42519600,
-            "fundingShortfall": 0,
-            "salePriceAssumption": "지급일 종가 유지 매각 가정"
-          },
-          "policyRow": {
-            "originYear": 2026,
-            "basisYear": 2026,
-            "basisModel": "사용자 제공 2026 기초금액 조건",
-            "futureAssumption": false,
-            "contractSalary": 85000000,
-            "workBonus": 15000000,
-            "workBonusInputPurpose": "전년도 성과에 따라 지급되는 업무성과급 · 특별성과급 기초금액 전용 입력, 별도 현금항목으로 재합산하지 않음",
-            "basis": 100000000,
-            "grade": "CL3",
-            "rating": null,
-            "gradeMultiplier": 1,
-            "rate": 1,
-            "rateScope": "personal",
-            "divisionMultiplier": 1,
-            "studyMultiplier": 1,
-            "preliminaryGross": 100000000,
-            "withholding": null,
-            "grossDeductionExample": {
-              "gross": 100000000,
-              "tax": 49500000,
-              "insurance": 4967000,
-              "donation": 200000,
-              "stockBudget": 45333000,
-              "withholdingTotal": 54467000,
-              "deductionTotal": 54667000,
-              "pensionIncluded": false,
-              "finalAnnualTax": null,
-              "finalAnnualInsurance": null,
-              "laterRefundOrExtraCharge": null,
-              "settlementDate": null
-            },
-            "withholdingAlternatives": [
-              {
-                "key": "gross_reported_insurance_gross",
-                "name": "가정 A: 공제전 환산주수 신고 · 세금 종가 근로소득 Y · 보험 총 지급액 G",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 1000,
-                "reportedEmploymentIncomeExample": 120000000,
-                "tax": 59400000,
-                "insurance": 4967000,
-                "insuranceBase": "gross",
-                "donation": 200000,
-                "stockBudget": 35433000,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 354.33,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 11811000
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 11811000
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 11811000
-                  }
-                ],
-                "reportedDefinition": "gross_equivalent",
-                "taxBase": "employment_income"
-              },
-              {
-                "key": "net_reported_insurance_gross",
-                "name": "가정 B: 공제후 환산주수 신고 · 세금 Y · 보험 G",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 594.9372647427855,
-                "reportedEmploymentIncomeExample": 71392472,
-                "tax": 35339274,
-                "insurance": 4967000,
-                "insuranceBase": "gross",
-                "donation": 200000,
-                "stockBudget": 59493726,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 594.93726,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 19831242
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 19831242
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 19831242
-                  }
-                ],
-                "reportedDefinition": "net_delivered",
-                "taxBase": "employment_income"
-              },
-              {
-                "key": "net_reported_insurance_income",
-                "name": "가정 C: 공제후 환산주수 신고 · 세금 Y · 보험 Y",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 603.5302285190409,
-                "reportedEmploymentIncomeExample": 72423627,
-                "tax": 35849695,
-                "insurance": 3597282,
-                "insuranceBase": "employment_income",
-                "donation": 200000,
-                "stockBudget": 60353023,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 603.53023,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 20117675
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 20117674
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 20117674
-                  }
-                ],
-                "reportedDefinition": "net_delivered",
-                "taxBase": "employment_income"
-              },
-              {
-                "key": "gross_equivalent_gross_gross",
-                "name": "공제전 환산주수 신고 · 세금 G · 보험 G",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 1000,
-                "reportedEmploymentIncomeExample": 120000000,
-                "tax": 49500000,
-                "insurance": 4967000,
-                "insuranceBase": "gross",
-                "donation": 200000,
-                "stockBudget": 45333000,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 453.33,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 15111000
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 15111000
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 15111000
-                  }
-                ],
-                "reportedDefinition": "gross_equivalent",
-                "taxBase": "gross"
-              },
-              {
-                "key": "gross_equivalent_gross_employment_income",
-                "name": "공제전 환산주수 신고 · 세금 G · 보험 Y",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 1000,
-                "reportedEmploymentIncomeExample": 120000000,
-                "tax": 49500000,
-                "insurance": 5960400,
-                "insuranceBase": "employment_income",
-                "donation": 200000,
-                "stockBudget": 44339600,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 443.396,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 14779867
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 14779867
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 14779866
-                  }
-                ],
-                "reportedDefinition": "gross_equivalent",
-                "taxBase": "gross"
-              },
-              {
-                "key": "gross_equivalent_employment_income_employment_income",
-                "name": "공제전 환산주수 신고 · 세금 Y · 보험 Y",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 1000,
-                "reportedEmploymentIncomeExample": 120000000,
-                "tax": 59400000,
-                "insurance": 5960400,
-                "insuranceBase": "employment_income",
-                "donation": 200000,
-                "stockBudget": 34439600,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 344.396,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 11479867
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 11479867
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 11479866
-                  }
-                ],
-                "reportedDefinition": "gross_equivalent",
-                "taxBase": "employment_income"
-              },
-              {
-                "key": "net_delivered_gross_gross",
-                "name": "공제후 환산주수 신고 · 세금 G · 보험 G",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 453.33,
-                "reportedEmploymentIncomeExample": 54399600,
-                "tax": 49500000,
-                "insurance": 4967000,
-                "insuranceBase": "gross",
-                "donation": 200000,
-                "stockBudget": 45333000,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 453.33,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 15111000
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 15111000
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 15111000
-                  }
-                ],
-                "reportedDefinition": "net_delivered",
-                "taxBase": "gross"
-              },
-              {
-                "key": "net_delivered_gross_employment_income",
-                "name": "공제후 환산주수 신고 · 세금 G · 보험 Y",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 474.70564475030295,
-                "reportedEmploymentIncomeExample": 56964677,
-                "tax": 49500000,
-                "insurance": 2829436,
-                "insuranceBase": "employment_income",
-                "donation": 200000,
-                "stockBudget": 47470564,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 474.70564,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 15823522
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 15823521
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 15823521
-                  }
-                ],
-                "reportedDefinition": "net_delivered",
-                "taxBase": "gross"
-              }
-            ],
-            "selectedWithholdingScenario": {
-              "key": "gross_reported_insurance_gross",
-              "name": "가정 A: 공제전 환산주수 신고 · 세금 종가 근로소득 Y · 보험 총 지급액 G",
-              "assumptionOnly": true,
-              "confirmed": false,
-              "reportedFractionalShares": 1000,
-              "reportedEmploymentIncomeExample": 120000000,
-              "tax": 59400000,
-              "insurance": 4967000,
-              "insuranceBase": "gross",
-              "donation": 200000,
-              "stockBudget": 35433000,
-              "unfundedDeduction": 0,
-              "netFractionalShares": 354.33,
-              "actualDeliveredShares": null,
-              "finalAnnualTax": null,
-              "laterCashSettlement": null,
-              "releaseExamples": [
-                {
-                  "availableDate": "2027-04-01",
-                  "amount": 11811000
-                },
-                {
-                  "availableDate": "2028-04-01",
-                  "amount": 11811000
-                },
-                {
-                  "availableDate": "2029-04-01",
-                  "amount": 11811000
-                }
-              ],
-              "reportedDefinition": "gross_equivalent",
-              "taxBase": "employment_income"
-            },
-            "reportedSharesDefinitionConfirmed": false,
-            "prices": {
-              "vwapWeek": 100000,
-              "vwapMonth": 100000,
-              "vwapTwoMonths": 100000,
-              "mean": {
-                "numerator": 300000,
-                "denominator": 3
-              },
-              "closingPrice": 120000,
-              "salePriceAssumption": "지급일 종가 유지 매각 가정"
-            },
-            "shares": {
-              "fractionalGrossShares": 1000,
-              "fractionalNetShares": 354.33,
-              "actualDeliveredShares": null,
-              "roundingPolicy": "미확인",
-              "reportedDefinition": "gross_equivalent"
-            },
-            "shareIncomeCandidates": {
-              "grossEquivalent": 120000000,
-              "netDeliveredEquivalent": 42519600,
-              "note": "선택 공제 가정의 정의 비교. 실제 주식수·신고소득 확정 아님."
-            },
-            "reportedEmploymentIncome": null,
-            "confirmedIncomeReportYear": null,
-            "payment": {
-              "actualDate": null,
-              "assumedDate": "2027-04-01",
-              "expectedYear": 2027,
-              "expectedWindow": "3월말~4월초 · 정기 주총 의결 이후",
-              "exactDateConfirmed": false
-            },
-            "releases": [
-              {
-                "tranche": 1,
-                "availableDate": null,
-                "assumedAvailableDate": "2027-04-01",
-                "expectedYear": 2027,
-                "amount": null,
-                "valuationOnly": true,
-                "confirmedDate": false
-              },
-              {
-                "tranche": 2,
-                "availableDate": null,
-                "assumedAvailableDate": "2028-04-01",
-                "expectedYear": 2028,
-                "amount": null,
-                "valuationOnly": true,
-                "confirmedDate": false
-              },
-              {
-                "tranche": 3,
-                "availableDate": null,
-                "assumedAvailableDate": "2029-04-01",
-                "expectedYear": 2029,
-                "amount": null,
-                "valuationOnly": true,
-                "confirmedDate": false
-              }
-            ],
-            "pending": true,
-            "reasons": [
-              "공제전 환산주수 해석은 합리적 추론·기본 가정이며 회사 계산예시 확인 대기",
-              "49.5% 세금·4.967% 보험료의 G 또는 종가 근로소득 Y 산정기준 확인 대기",
-              "실제 지급일 미확정: 3월말~4월초 예상 (정기 주총 의결 이후)",
-              "실제 입고주수·최종 세무 정산 모델 확인 대기"
-            ],
-            "confirmedCompensation": null,
-            "confirmedLiquidCashflow": null,
-            "rateSource": "direct",
-            "zeroReason": null,
-            "expectedRateIsEstimate": false
-          },
-          "finalTaxEstimate": 42626745,
-          "finalInsuranceEstimate": 5960859,
-          "deduction": 48587604,
-          "identity": {
-            "costIdentity": {
-              "gross": 100000000,
-              "donation": 200000,
-              "withheldTax": 59400000,
-              "withheldInsurance": 4967000,
-              "stockBudget": 35433000,
-              "difference": 0
-            },
-            "marketAdjustment": 7086600,
-            "settlementTax": 16773255,
-            "settlementInsurance": -993859,
-            "finalEconomicValue": 58298996,
-            "valuationIdentityDifference": 0
-          },
-          "marketAdjustment": 7086600,
-          "net": 58298996,
-          "settlements": [
-            {
-              "id": "1:2026:opi2:tax",
-              "origin": 2026,
-              "payYear": 2027,
-              "year": 2028,
-              "type": "settlement",
-              "kind": "tax",
-              "net": 16773255,
-              "gross": 16773255,
-              "assumptionOnly": true
-            },
-            {
-              "id": "1:2026:opi2:insurance",
-              "origin": 2026,
-              "payYear": 2027,
-              "year": 2028,
-              "type": "settlement",
-              "kind": "insurance",
-              "net": -993859,
-              "gross": -993859,
-              "assumptionOnly": true
-            }
-          ],
-          "tranches": [
-            {
-              "id": "1:2026:opi2:stock:0",
-              "year": 2027,
-              "net": 14173200,
-              "gross": 33333334,
-              "origin": 2026,
-              "payYear": 2027,
-              "type": "opi2",
-              "availableDate": "2027-04-01",
-              "assumptionOnly": true
-            },
-            {
-              "id": "1:2026:opi2:stock:1",
-              "year": 2028,
-              "net": 14173200,
-              "gross": 33333333,
-              "origin": 2026,
-              "payYear": 2027,
-              "type": "opi2",
-              "availableDate": "2028-04-01",
-              "assumptionOnly": true
-            },
-            {
-              "id": "1:2026:opi2:stock:2",
-              "year": 2029,
-              "net": 14173200,
-              "gross": 33333333,
-              "origin": 2026,
-              "payYear": 2027,
-              "type": "opi2",
-              "availableDate": "2029-04-01",
-              "assumptionOnly": true
-            }
-          ]
-        }
-      ],
-      "taxLog": [
-        {
-          "person": "사용자",
-          "year": 2026,
-          "baseGross": 85000000,
-          "bonus": 8500000,
-          "baseTax": {
-            "gross": 85000000,
-            "year": 2026,
-            "deduction": 14000000,
-            "taxable": 63084124,
-            "income": 9380190,
-            "local": 938019,
-            "pension": 3693600,
-            "pensionRate": 0.0475,
-            "pensionCap": 77760000,
-            "health": 3055750,
-            "care": 401526,
-            "employment": 765000,
-            "insurance": 7915876,
-            "total": 18234085
-          },
-          "fullTax": {
-            "gross": 93500000,
-            "year": 2026,
-            "deduction": 14425000,
-            "taxable": 70736897,
-            "income": 11216855,
-            "local": 1121686,
-            "pension": 3693600,
-            "pensionRate": 0.0475,
-            "pensionCap": 77760000,
-            "health": 3361325,
-            "care": 441678,
-            "employment": 841500,
-            "insurance": 8338103,
-            "total": 20676644
-          },
-          "increment": 2442559,
-          "incrementTax": 2020332,
-          "incrementInsurance": 422227,
-          "allocation": [
-            {
-              "id": "1:2026:tai",
-              "type": "tai",
-              "origin": 2026,
-              "taxableIncome": 8500000,
-              "finalTaxEstimate": 2020332,
-              "finalInsuranceEstimate": 422227
-            }
-          ],
-          "futureAssumption": false,
-          "method": "동년 모든 신고소득 합산 증분 세금·보험료 각각 소득 비례 최대잔여법. 선징수를 다시 차감하지 않음."
-        },
-        {
-          "person": "사용자",
-          "year": 2027,
-          "baseGross": 89250000,
-          "bonus": 162500000,
-          "baseTax": {
-            "gross": 89250000,
-            "year": 2027,
-            "deduction": 14212500,
-            "taxable": 66650110,
-            "income": 10236026,
-            "local": 1023603,
-            "pension": 3954000,
-            "pensionRate": 0.05,
-            "pensionCap": 79080000,
-            "health": 3208538,
-            "care": 421602,
-            "employment": 803250,
-            "insurance": 8387390,
-            "total": 19647019
-          },
-          "fullTax": {
-            "gross": 251750000,
-            "year": 2027,
-            "deduction": 17785000,
-            "taxable": 217505613,
-            "income": 62712133,
-            "local": 6271213,
-            "pension": 3954000,
-            "pensionRate": 0.05,
-            "pensionCap": 79080000,
-            "health": 9050413,
-            "care": 1189224,
-            "employment": 2265750,
-            "insurance": 16459387,
-            "total": 85442733
-          },
-          "increment": 65795714,
-          "incrementTax": 57723717,
-          "incrementInsurance": 8071997,
-          "allocation": [
-            {
-              "id": "1:2026:opi1",
-              "type": "opi1",
-              "origin": 2026,
-              "taxableIncome": 42500000,
-              "finalTaxEstimate": 15096972,
-              "finalInsuranceEstimate": 2111138
-            },
-            {
-              "id": "1:2026:opi2",
-              "type": "opi2",
-              "origin": 2026,
-              "taxableIncome": 120000000,
-              "finalTaxEstimate": 42626745,
-              "finalInsuranceEstimate": 5960859
-            }
-          ],
-          "futureAssumption": true,
-          "method": "동년 모든 신고소득 합산 증분 세금·보험료 각각 소득 비례 최대잔여법. 선징수를 다시 차감하지 않음."
-        }
-      ],
-      "psuShares": 600,
-      "opening": {
-        "stock": 0,
-        "cash": 0,
-        "total": 0
-      },
-      "locked": {
-        "unpaidStock": 42519600,
-        "paidLockedStock": 0,
-        "totalStock": 42519600,
-        "unpaidCash": 41071286,
-        "normalUnpaidCash": 25291890,
-        "settlementAfterPeriod": 15779396,
-        "settlementReceivable": 16773255,
-        "settlementPayable": 993859,
-        "settlementEvents": [
-          {
-            "id": "1:2026:opi2:tax",
-            "origin": 2026,
-            "payYear": 2027,
-            "year": 2028,
-            "type": "settlement",
-            "kind": "tax",
-            "net": 16773255,
-            "gross": 16773255,
-            "assumptionOnly": true
-          },
-          {
-            "id": "1:2026:opi2:insurance",
-            "origin": 2026,
-            "payYear": 2027,
-            "year": 2028,
-            "type": "settlement",
-            "kind": "insurance",
-            "net": -993859,
-            "gross": -993859,
-            "assumptionOnly": true
-          }
-        ]
-      },
-      "totals": {
-        "grossAccrual": 236000000,
-        "netAccrual": 156414242,
-        "netLiquid": 72823356,
-        "contract": 85000000,
-        "grossLiquid": 93500000,
-        "marketAdjustment": 7086600,
-        "donation": 200000,
-        "settlementTotal": 15779396,
-        "settlementInPeriod": 0
-      }
-    }
-  ],
-  "performanceScenario": {
-    "name": "중간 전망",
-    "performance": {
-      "2026": 389,
-      "2027": 567,
-      "2028": 576,
-      "2029": 518,
-      "2030": 466
-    },
-    "unpaid": {},
-    "opi2Factor": 1,
-    "psuMode": "normal"
   },
   "annualAccrualCompensation": [
     {
@@ -1895,606 +292,18 @@
         "salary": 85000000,
         "opi1": 42500000,
         "tai": 8500000,
-        "opi2": 100000000,
+        "opi2": 490140000,
         "psu": 0,
         "settlement": 0
       },
       "net": {
         "salary": 66765915,
-        "opi1": 25291890,
+        "opi1": 23508665,
         "tai": 6057441,
-        "opi2": 58298996,
+        "opi2": 270138244,
         "psu": 0,
         "settlement": 0
       },
-      "details": [
-        {
-          "id": "1:2026:opi1",
-          "personId": "1",
-          "type": "opi1",
-          "origin": 2026,
-          "payYear": 2027,
-          "gross": 42500000,
-          "taxableIncome": 42500000,
-          "liquidYears": [
-            2027
-          ],
-          "finalTaxEstimate": 15096972,
-          "finalInsuranceEstimate": 2111138,
-          "deduction": 17208110,
-          "net": 25291890,
-          "tranches": [
-            {
-              "id": "1:2026:opi1:0",
-              "year": 2027,
-              "net": 25291890,
-              "gross": 42500000,
-              "origin": 2026,
-              "payYear": 2027,
-              "type": "opi1"
-            }
-          ]
-        },
-        {
-          "id": "1:2026:tai",
-          "personId": "1",
-          "type": "tai",
-          "origin": 2026,
-          "payYear": 2026,
-          "gross": 8500000,
-          "taxableIncome": 8500000,
-          "liquidYears": [
-            2026
-          ],
-          "finalTaxEstimate": 2020332,
-          "finalInsuranceEstimate": 422227,
-          "deduction": 2442559,
-          "net": 6057441,
-          "tranches": [
-            {
-              "id": "1:2026:tai:0",
-              "year": 2026,
-              "net": 6057441,
-              "gross": 8500000,
-              "origin": 2026,
-              "payYear": 2026,
-              "type": "tai"
-            }
-          ]
-        },
-        {
-          "id": "1:2026:opi2",
-          "personId": "1",
-          "type": "opi2",
-          "origin": 2026,
-          "payYear": 2027,
-          "gross": 100000000,
-          "taxableIncome": 120000000,
-          "liquidYears": [
-            2027,
-            2028,
-            2029
-          ],
-          "reason": null,
-          "paymentDate": "2027-04-01",
-          "assumedDelivery": true,
-          "snapshot": {
-            "assumptionOnly": true,
-            "reportedSharesDefinitionConfirmed": false,
-            "gross": 100000000,
-            "benchmarkStockBudget": 35433000,
-            "reportedFractionalShares": 1000,
-            "estimatedNetFractionalShares": 354.33,
-            "actualDeliveredShares": null,
-            "reportedEmploymentIncome": 120000000,
-            "withheldTax": 59400000,
-            "withheldInsurance": 4967000,
-            "donation": 200000,
-            "referencePrice": {
-              "numerator": 300000,
-              "denominator": 3
-            },
-            "deliveryClose": 120000,
-            "estimatedStockMarketValue": 42519600,
-            "fundingShortfall": 0,
-            "salePriceAssumption": "지급일 종가 유지 매각 가정"
-          },
-          "policyRow": {
-            "originYear": 2026,
-            "basisYear": 2026,
-            "basisModel": "사용자 제공 2026 기초금액 조건",
-            "futureAssumption": false,
-            "contractSalary": 85000000,
-            "workBonus": 15000000,
-            "workBonusInputPurpose": "전년도 성과에 따라 지급되는 업무성과급 · 특별성과급 기초금액 전용 입력, 별도 현금항목으로 재합산하지 않음",
-            "basis": 100000000,
-            "grade": "CL3",
-            "rating": null,
-            "gradeMultiplier": 1,
-            "rate": 1,
-            "rateScope": "personal",
-            "divisionMultiplier": 1,
-            "studyMultiplier": 1,
-            "preliminaryGross": 100000000,
-            "withholding": null,
-            "grossDeductionExample": {
-              "gross": 100000000,
-              "tax": 49500000,
-              "insurance": 4967000,
-              "donation": 200000,
-              "stockBudget": 45333000,
-              "withholdingTotal": 54467000,
-              "deductionTotal": 54667000,
-              "pensionIncluded": false,
-              "finalAnnualTax": null,
-              "finalAnnualInsurance": null,
-              "laterRefundOrExtraCharge": null,
-              "settlementDate": null
-            },
-            "withholdingAlternatives": [
-              {
-                "key": "gross_reported_insurance_gross",
-                "name": "가정 A: 공제전 환산주수 신고 · 세금 종가 근로소득 Y · 보험 총 지급액 G",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 1000,
-                "reportedEmploymentIncomeExample": 120000000,
-                "tax": 59400000,
-                "insurance": 4967000,
-                "insuranceBase": "gross",
-                "donation": 200000,
-                "stockBudget": 35433000,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 354.33,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 11811000
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 11811000
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 11811000
-                  }
-                ],
-                "reportedDefinition": "gross_equivalent",
-                "taxBase": "employment_income"
-              },
-              {
-                "key": "net_reported_insurance_gross",
-                "name": "가정 B: 공제후 환산주수 신고 · 세금 Y · 보험 G",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 594.9372647427855,
-                "reportedEmploymentIncomeExample": 71392472,
-                "tax": 35339274,
-                "insurance": 4967000,
-                "insuranceBase": "gross",
-                "donation": 200000,
-                "stockBudget": 59493726,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 594.93726,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 19831242
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 19831242
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 19831242
-                  }
-                ],
-                "reportedDefinition": "net_delivered",
-                "taxBase": "employment_income"
-              },
-              {
-                "key": "net_reported_insurance_income",
-                "name": "가정 C: 공제후 환산주수 신고 · 세금 Y · 보험 Y",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 603.5302285190409,
-                "reportedEmploymentIncomeExample": 72423627,
-                "tax": 35849695,
-                "insurance": 3597282,
-                "insuranceBase": "employment_income",
-                "donation": 200000,
-                "stockBudget": 60353023,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 603.53023,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 20117675
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 20117674
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 20117674
-                  }
-                ],
-                "reportedDefinition": "net_delivered",
-                "taxBase": "employment_income"
-              },
-              {
-                "key": "gross_equivalent_gross_gross",
-                "name": "공제전 환산주수 신고 · 세금 G · 보험 G",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 1000,
-                "reportedEmploymentIncomeExample": 120000000,
-                "tax": 49500000,
-                "insurance": 4967000,
-                "insuranceBase": "gross",
-                "donation": 200000,
-                "stockBudget": 45333000,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 453.33,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 15111000
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 15111000
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 15111000
-                  }
-                ],
-                "reportedDefinition": "gross_equivalent",
-                "taxBase": "gross"
-              },
-              {
-                "key": "gross_equivalent_gross_employment_income",
-                "name": "공제전 환산주수 신고 · 세금 G · 보험 Y",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 1000,
-                "reportedEmploymentIncomeExample": 120000000,
-                "tax": 49500000,
-                "insurance": 5960400,
-                "insuranceBase": "employment_income",
-                "donation": 200000,
-                "stockBudget": 44339600,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 443.396,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 14779867
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 14779867
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 14779866
-                  }
-                ],
-                "reportedDefinition": "gross_equivalent",
-                "taxBase": "gross"
-              },
-              {
-                "key": "gross_equivalent_employment_income_employment_income",
-                "name": "공제전 환산주수 신고 · 세금 Y · 보험 Y",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 1000,
-                "reportedEmploymentIncomeExample": 120000000,
-                "tax": 59400000,
-                "insurance": 5960400,
-                "insuranceBase": "employment_income",
-                "donation": 200000,
-                "stockBudget": 34439600,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 344.396,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 11479867
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 11479867
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 11479866
-                  }
-                ],
-                "reportedDefinition": "gross_equivalent",
-                "taxBase": "employment_income"
-              },
-              {
-                "key": "net_delivered_gross_gross",
-                "name": "공제후 환산주수 신고 · 세금 G · 보험 G",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 453.33,
-                "reportedEmploymentIncomeExample": 54399600,
-                "tax": 49500000,
-                "insurance": 4967000,
-                "insuranceBase": "gross",
-                "donation": 200000,
-                "stockBudget": 45333000,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 453.33,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 15111000
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 15111000
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 15111000
-                  }
-                ],
-                "reportedDefinition": "net_delivered",
-                "taxBase": "gross"
-              },
-              {
-                "key": "net_delivered_gross_employment_income",
-                "name": "공제후 환산주수 신고 · 세금 G · 보험 Y",
-                "assumptionOnly": true,
-                "confirmed": false,
-                "reportedFractionalShares": 474.70564475030295,
-                "reportedEmploymentIncomeExample": 56964677,
-                "tax": 49500000,
-                "insurance": 2829436,
-                "insuranceBase": "employment_income",
-                "donation": 200000,
-                "stockBudget": 47470564,
-                "unfundedDeduction": 0,
-                "netFractionalShares": 474.70564,
-                "actualDeliveredShares": null,
-                "finalAnnualTax": null,
-                "laterCashSettlement": null,
-                "releaseExamples": [
-                  {
-                    "availableDate": "2027-04-01",
-                    "amount": 15823522
-                  },
-                  {
-                    "availableDate": "2028-04-01",
-                    "amount": 15823521
-                  },
-                  {
-                    "availableDate": "2029-04-01",
-                    "amount": 15823521
-                  }
-                ],
-                "reportedDefinition": "net_delivered",
-                "taxBase": "gross"
-              }
-            ],
-            "selectedWithholdingScenario": {
-              "key": "gross_reported_insurance_gross",
-              "name": "가정 A: 공제전 환산주수 신고 · 세금 종가 근로소득 Y · 보험 총 지급액 G",
-              "assumptionOnly": true,
-              "confirmed": false,
-              "reportedFractionalShares": 1000,
-              "reportedEmploymentIncomeExample": 120000000,
-              "tax": 59400000,
-              "insurance": 4967000,
-              "insuranceBase": "gross",
-              "donation": 200000,
-              "stockBudget": 35433000,
-              "unfundedDeduction": 0,
-              "netFractionalShares": 354.33,
-              "actualDeliveredShares": null,
-              "finalAnnualTax": null,
-              "laterCashSettlement": null,
-              "releaseExamples": [
-                {
-                  "availableDate": "2027-04-01",
-                  "amount": 11811000
-                },
-                {
-                  "availableDate": "2028-04-01",
-                  "amount": 11811000
-                },
-                {
-                  "availableDate": "2029-04-01",
-                  "amount": 11811000
-                }
-              ],
-              "reportedDefinition": "gross_equivalent",
-              "taxBase": "employment_income"
-            },
-            "reportedSharesDefinitionConfirmed": false,
-            "prices": {
-              "vwapWeek": 100000,
-              "vwapMonth": 100000,
-              "vwapTwoMonths": 100000,
-              "mean": {
-                "numerator": 300000,
-                "denominator": 3
-              },
-              "closingPrice": 120000,
-              "salePriceAssumption": "지급일 종가 유지 매각 가정"
-            },
-            "shares": {
-              "fractionalGrossShares": 1000,
-              "fractionalNetShares": 354.33,
-              "actualDeliveredShares": null,
-              "roundingPolicy": "미확인",
-              "reportedDefinition": "gross_equivalent"
-            },
-            "shareIncomeCandidates": {
-              "grossEquivalent": 120000000,
-              "netDeliveredEquivalent": 42519600,
-              "note": "선택 공제 가정의 정의 비교. 실제 주식수·신고소득 확정 아님."
-            },
-            "reportedEmploymentIncome": null,
-            "confirmedIncomeReportYear": null,
-            "payment": {
-              "actualDate": null,
-              "assumedDate": "2027-04-01",
-              "expectedYear": 2027,
-              "expectedWindow": "3월말~4월초 · 정기 주총 의결 이후",
-              "exactDateConfirmed": false
-            },
-            "releases": [
-              {
-                "tranche": 1,
-                "availableDate": null,
-                "assumedAvailableDate": "2027-04-01",
-                "expectedYear": 2027,
-                "amount": null,
-                "valuationOnly": true,
-                "confirmedDate": false
-              },
-              {
-                "tranche": 2,
-                "availableDate": null,
-                "assumedAvailableDate": "2028-04-01",
-                "expectedYear": 2028,
-                "amount": null,
-                "valuationOnly": true,
-                "confirmedDate": false
-              },
-              {
-                "tranche": 3,
-                "availableDate": null,
-                "assumedAvailableDate": "2029-04-01",
-                "expectedYear": 2029,
-                "amount": null,
-                "valuationOnly": true,
-                "confirmedDate": false
-              }
-            ],
-            "pending": true,
-            "reasons": [
-              "공제전 환산주수 해석은 합리적 추론·기본 가정이며 회사 계산예시 확인 대기",
-              "49.5% 세금·4.967% 보험료의 G 또는 종가 근로소득 Y 산정기준 확인 대기",
-              "실제 지급일 미확정: 3월말~4월초 예상 (정기 주총 의결 이후)",
-              "실제 입고주수·최종 세무 정산 모델 확인 대기"
-            ],
-            "confirmedCompensation": null,
-            "confirmedLiquidCashflow": null,
-            "rateSource": "direct",
-            "zeroReason": null,
-            "expectedRateIsEstimate": false
-          },
-          "finalTaxEstimate": 42626745,
-          "finalInsuranceEstimate": 5960859,
-          "deduction": 48587604,
-          "identity": {
-            "costIdentity": {
-              "gross": 100000000,
-              "donation": 200000,
-              "withheldTax": 59400000,
-              "withheldInsurance": 4967000,
-              "stockBudget": 35433000,
-              "difference": 0
-            },
-            "marketAdjustment": 7086600,
-            "settlementTax": 16773255,
-            "settlementInsurance": -993859,
-            "finalEconomicValue": 58298996,
-            "valuationIdentityDifference": 0
-          },
-          "marketAdjustment": 7086600,
-          "net": 58298996,
-          "settlements": [
-            {
-              "id": "1:2026:opi2:tax",
-              "origin": 2026,
-              "payYear": 2027,
-              "year": 2028,
-              "type": "settlement",
-              "kind": "tax",
-              "net": 16773255,
-              "gross": 16773255,
-              "assumptionOnly": true
-            },
-            {
-              "id": "1:2026:opi2:insurance",
-              "origin": 2026,
-              "payYear": 2027,
-              "year": 2028,
-              "type": "settlement",
-              "kind": "insurance",
-              "net": -993859,
-              "gross": -993859,
-              "assumptionOnly": true
-            }
-          ],
-          "tranches": [
-            {
-              "id": "1:2026:opi2:stock:0",
-              "year": 2027,
-              "net": 14173200,
-              "gross": 33333334,
-              "origin": 2026,
-              "payYear": 2027,
-              "type": "opi2",
-              "availableDate": "2027-04-01",
-              "assumptionOnly": true
-            },
-            {
-              "id": "1:2026:opi2:stock:1",
-              "year": 2028,
-              "net": 14173200,
-              "gross": 33333333,
-              "origin": 2026,
-              "payYear": 2027,
-              "type": "opi2",
-              "availableDate": "2028-04-01",
-              "assumptionOnly": true
-            },
-            {
-              "id": "1:2026:opi2:stock:2",
-              "year": 2029,
-              "net": 14173200,
-              "gross": 33333333,
-              "origin": 2026,
-              "payYear": 2027,
-              "type": "opi2",
-              "availableDate": "2029-04-01",
-              "assumptionOnly": true
-            }
-          ]
-        }
-      ],
       "reasons": [
         "미확정 정책 · 선택한 가정에 따른 OPI2 추정"
       ],
@@ -2514,13 +323,201 @@
         "insurance": 7915876,
         "total": 18234085
       },
-      "opi2StockMarketValue": 42519600,
-      "opi2SettlementEconomic": 15779396,
-      "netTotal": 156414242,
-      "grossTotal": 236000000,
-      "netStock": 42519600,
-      "netCash": 113894642,
-      "lockedStock": 42519600
+      "opi2StockMarketValue": 222195166,
+      "opi2SettlementEconomic": 47943078,
+      "netTotal": 366470265,
+      "grossTotal": 626140000,
+      "netStock": 222195166,
+      "netCash": 144275099,
+      "lockedStock": 222195166
+    },
+    {
+      "year": 2027,
+      "salary": 89250000,
+      "allowance": 0,
+      "gross": {
+        "salary": 89250000,
+        "opi1": 44625000,
+        "tai": 8925000,
+        "opi2": 750141000,
+        "psu": 0,
+        "settlement": 0
+      },
+      "net": {
+        "salary": 69602981,
+        "opi1": 23955442,
+        "tai": 4936820,
+        "opi2": 401187891,
+        "psu": 0,
+        "settlement": 0
+      },
+      "reasons": [
+        "미확정 정책 · 선택한 가정에 따른 OPI2 추정"
+      ],
+      "baseTax": {
+        "gross": 89250000,
+        "year": 2027,
+        "deduction": 14212500,
+        "taxable": 66650110,
+        "income": 10236026,
+        "local": 1023603,
+        "pension": 3954000,
+        "pensionRate": 0.05,
+        "pensionCap": 79080000,
+        "health": 3208538,
+        "care": 421602,
+        "employment": 803250,
+        "insurance": 8387390,
+        "total": 19647019
+      },
+      "opi2StockMarketValue": 340061420,
+      "opi2SettlementEconomic": 61126471,
+      "netTotal": 499683134,
+      "grossTotal": 892941000,
+      "netStock": 340061420,
+      "netCash": 159621714,
+      "lockedStock": 340061420
+    },
+    {
+      "year": 2028,
+      "salary": 93712500,
+      "allowance": 0,
+      "gross": {
+        "salary": 93712500,
+        "opi1": 46856250,
+        "tai": 9371250,
+        "opi2": 800150400,
+        "psu": 50000000,
+        "settlement": 0
+      },
+      "net": {
+        "salary": 72637630,
+        "opi1": 25036926,
+        "tai": 5030643,
+        "opi2": 425947922,
+        "psu": 26840833,
+        "settlement": 0
+      },
+      "reasons": [
+        "미확정 정책 · 선택한 가정에 따른 OPI2 추정"
+      ],
+      "baseTax": {
+        "gross": 93712500,
+        "year": 2028,
+        "deduction": 14435625,
+        "taxable": 70470116,
+        "income": 11152828,
+        "local": 1115283,
+        "pension": 4151700,
+        "pensionRate": 0.0525,
+        "pensionCap": 79080000,
+        "health": 3368964,
+        "care": 442682,
+        "employment": 843413,
+        "insurance": 8806759,
+        "total": 21074870
+      },
+      "opi2StockMarketValue": 362732181,
+      "opi2SettlementEconomic": 63215741,
+      "netTotal": 555493954,
+      "grossTotal": 1000090400,
+      "netStock": 389573014,
+      "netCash": 165920940,
+      "lockedStock": 362732181
+    },
+    {
+      "year": 2029,
+      "salary": 98398125,
+      "allowance": 0,
+      "gross": {
+        "salary": 98398125,
+        "opi1": 49199063,
+        "tai": 9839813,
+        "opi2": 755558685,
+        "psu": 50000000,
+        "settlement": 0
+      },
+      "net": {
+        "salary": 75831287,
+        "opi1": 26290912,
+        "tai": 5257755,
+        "opi2": 402243051,
+        "psu": 26716741,
+        "settlement": 0
+      },
+      "reasons": [
+        "미확정 정책 · 선택한 가정에 따른 OPI2 추정"
+      ],
+      "baseTax": {
+        "gross": 98398125,
+        "year": 2029,
+        "deduction": 14669906,
+        "taxable": 74491007,
+        "income": 12117842,
+        "local": 1211784,
+        "pension": 4349400,
+        "pensionRate": 0.055,
+        "pensionCap": 79080000,
+        "health": 3537413,
+        "care": 464816,
+        "employment": 885583,
+        "insurance": 9237212,
+        "total": 22566838
+      },
+      "opi2StockMarketValue": 342517419,
+      "opi2SettlementEconomic": 59725632,
+      "netTotal": 536339746,
+      "grossTotal": 962995686,
+      "netStock": 369234160,
+      "netCash": 167105586,
+      "lockedStock": 342517419
+    },
+    {
+      "year": 2030,
+      "salary": 103318031,
+      "allowance": 0,
+      "gross": {
+        "salary": 103318031,
+        "opi1": 51659016,
+        "tai": 10331803,
+        "opi2": 713696648,
+        "psu": 50000000,
+        "settlement": 0
+      },
+      "net": {
+        "salary": 79165624,
+        "opi1": 27696171,
+        "tai": 5521091,
+        "opi2": 381209860,
+        "psu": 26718915,
+        "settlement": 0
+      },
+      "reasons": [
+        "미확정 정책 · 선택한 가정에 따른 OPI2 추정"
+      ],
+      "baseTax": {
+        "gross": 103318031,
+        "year": 2030,
+        "deduction": 14816361,
+        "taxable": 78822368,
+        "income": 13157368,
+        "local": 1315737,
+        "pension": 4547100,
+        "pensionRate": 0.0575,
+        "pensionCap": 79080000,
+        "health": 3714283,
+        "care": 488057,
+        "employment": 929862,
+        "insurance": 9679302,
+        "total": 24152407
+      },
+      "opi2StockMarketValue": 323540101,
+      "opi2SettlementEconomic": 57669759,
+      "netTotal": 520311661,
+      "grossTotal": 929005498,
+      "netStock": 350259016,
+      "netCash": 170052645,
+      "lockedStock": 323540101
     }
   ],
   "annualLiquidCashflow": [
@@ -2544,1047 +541,212 @@
         "psu": 0,
         "settlement": 0
       },
-      "details": [
-        {
-          "id": "1:2026:tai:0",
-          "year": 2026,
-          "net": 6057441,
-          "gross": 8500000,
-          "origin": 2026,
-          "payYear": 2026,
-          "type": "tai"
-        }
-      ],
       "reasons": [],
       "netTotal": 72823356,
       "grossTotal": 93500000,
       "cumulative": 72823356
+    },
+    {
+      "year": 2027,
+      "salary": 0,
+      "allowance": 0,
+      "gross": {
+        "salary": 89250000,
+        "opi1": 42500000,
+        "tai": 8925000,
+        "opi2": 163380000,
+        "psu": 0,
+        "settlement": 0
+      },
+      "net": {
+        "salary": 69602981,
+        "opi1": 23508665,
+        "tai": 4936820,
+        "opi2": 74065056,
+        "psu": 0,
+        "settlement": 0
+      },
+      "reasons": [],
+      "netTotal": 172113522,
+      "grossTotal": 304055000,
+      "cumulative": 244936878
+    },
+    {
+      "year": 2028,
+      "salary": 0,
+      "allowance": 0,
+      "gross": {
+        "salary": 93712500,
+        "opi1": 44625000,
+        "tai": 9371250,
+        "opi2": 413427000,
+        "psu": 50000000,
+        "settlement": 47943078
+      },
+      "net": {
+        "salary": 72637630,
+        "opi1": 23955442,
+        "tai": 5030643,
+        "opi2": 187418862,
+        "psu": 26840833,
+        "settlement": 47943078
+      },
+      "reasons": [],
+      "netTotal": 363826488,
+      "grossTotal": 659078828,
+      "cumulative": 608763366
+    },
+    {
+      "year": 2029,
+      "salary": 0,
+      "allowance": 0,
+      "gross": {
+        "salary": 98398125,
+        "opi1": 46856250,
+        "tai": 9839813,
+        "opi2": 680143800,
+        "psu": 50000000,
+        "settlement": 61126471
+      },
+      "net": {
+        "salary": 75831287,
+        "opi1": 25036926,
+        "tai": 5257755,
+        "opi2": 308329589,
+        "psu": 26716741,
+        "settlement": 61126471
+      },
+      "reasons": [],
+      "netTotal": 502298769,
+      "grossTotal": 946364459,
+      "cumulative": 1111062135
+    },
+    {
+      "year": 2030,
+      "salary": 0,
+      "allowance": 0,
+      "gross": {
+        "salary": 103318031,
+        "opi1": 49199063,
+        "tai": 10331803,
+        "opi2": 768616695,
+        "psu": 50000000,
+        "settlement": 63215741
+      },
+      "net": {
+        "salary": 79165624,
+        "opi1": 26290912,
+        "tai": 5521091,
+        "opi2": 348437006,
+        "psu": 26718915,
+        "settlement": 63215741
+      },
+      "reasons": [],
+      "netTotal": 549349289,
+      "grossTotal": 1044681333,
+      "cumulative": 1660411424
     }
   ],
-  "openingCompensationBalance": {
-    "stock": 0,
-    "cash": 0,
-    "total": 0
-  },
   "lockedStockAfter2030": {
-    "asOf": 2026,
-    "unpaidStock": 42519600,
-    "paidLockedStock": 0,
-    "totalStock": 42519600,
-    "unpaidCash": 41071286,
-    "normalUnpaidCash": 25291890,
-    "settlementAfterPeriod": 15779396,
-    "settlementReceivable": 16773255,
-    "settlementPayable": 993859,
+    "asOf": 2030,
+    "unpaidStock": 323540101,
+    "paidLockedStock": 349255673,
+    "totalStock": 672795774,
+    "unpaidCash": 145091562,
+    "normalUnpaidCash": 27696171,
+    "settlementAfterPeriod": 117395391,
+    "settlementReceivable": 117401019,
+    "settlementPayable": 5628,
     "settlementEvents": [
       {
-        "id": "1:2026:opi2:tax",
-        "origin": 2026,
-        "payYear": 2027,
-        "year": 2028,
+        "id": "1:2029:opi2:tax",
+        "origin": 2029,
+        "payYear": 2030,
+        "year": 2031,
         "type": "settlement",
         "kind": "tax",
-        "net": 16773255,
-        "gross": 16773255,
+        "net": 59728526,
+        "gross": 59728526,
         "assumptionOnly": true
       },
       {
-        "id": "1:2026:opi2:insurance",
-        "origin": 2026,
-        "payYear": 2027,
-        "year": 2028,
+        "id": "1:2029:opi2:insurance",
+        "origin": 2029,
+        "payYear": 2030,
+        "year": 2031,
         "type": "settlement",
         "kind": "insurance",
-        "net": -993859,
-        "gross": -993859,
+        "net": -2894,
+        "gross": -2894,
+        "assumptionOnly": true
+      },
+      {
+        "id": "1:2030:opi2:tax",
+        "origin": 2030,
+        "payYear": 2031,
+        "year": 2032,
+        "type": "settlement",
+        "kind": "tax",
+        "net": 57672493,
+        "gross": 57672493,
+        "assumptionOnly": true
+      },
+      {
+        "id": "1:2030:opi2:insurance",
+        "origin": 2030,
+        "payYear": 2031,
+        "year": 2032,
+        "type": "settlement",
+        "kind": "insurance",
+        "net": -2734,
+        "gross": -2734,
         "assumptionOnly": true
       }
     ]
   },
-  "cashSettlementAfterPeriod": [
-    {
-      "id": "1:2026:opi2:tax",
-      "origin": 2026,
-      "payYear": 2027,
-      "year": 2028,
-      "type": "settlement",
-      "kind": "tax",
-      "net": 16773255,
-      "gross": 16773255,
-      "assumptionOnly": true
-    },
-    {
-      "id": "1:2026:opi2:insurance",
-      "origin": 2026,
-      "payYear": 2027,
-      "year": 2028,
-      "type": "settlement",
-      "kind": "insurance",
-      "net": -993859,
-      "gross": -993859,
-      "assumptionOnly": true
-    }
-  ],
   "scenarioComparison": {
     "middle": {
       "name": "중간 전망",
       "totals": {
-        "grossAccrual": 236000000,
-        "netAccrual": 156414242,
-        "netLiquid": 72823356,
-        "contract": 85000000,
-        "grossLiquid": 93500000,
-        "marketAdjustment": 7086600,
-        "donation": 200000,
-        "settlementTotal": 15779396,
-        "settlementInPeriod": 0
-      },
-      "annual": [
-        {
-          "year": 2026,
-          "salary": 0,
-          "allowance": 0,
-          "gross": {
-            "salary": 85000000,
-            "opi1": 0,
-            "tai": 8500000,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "net": {
-            "salary": 66765915,
-            "opi1": 0,
-            "tai": 6057441,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "details": [
-            {
-              "id": "1:2026:tai:0",
-              "year": 2026,
-              "net": 6057441,
-              "gross": 8500000,
-              "origin": 2026,
-              "payYear": 2026,
-              "type": "tai"
-            }
-          ],
-          "reasons": [],
-          "netTotal": 72823356,
-          "grossTotal": 93500000,
-          "cumulative": 72823356
-        }
-      ],
-      "locked": {
-        "unpaidStock": 42519600,
-        "paidLockedStock": 0,
-        "totalStock": 42519600,
-        "unpaidCash": 41071286,
-        "normalUnpaidCash": 25291890,
-        "settlementAfterPeriod": 15779396,
-        "settlementReceivable": 16773255,
-        "settlementPayable": 993859,
-        "settlementEvents": [
-          {
-            "id": "1:2026:opi2:tax",
-            "origin": 2026,
-            "payYear": 2027,
-            "year": 2028,
-            "type": "settlement",
-            "kind": "tax",
-            "net": 16773255,
-            "gross": 16773255,
-            "assumptionOnly": true
-          },
-          {
-            "id": "1:2026:opi2:insurance",
-            "origin": 2026,
-            "payYear": 2027,
-            "year": 2028,
-            "type": "settlement",
-            "kind": "insurance",
-            "net": -993859,
-            "gross": -993859,
-            "assumptionOnly": true
-          }
-        ]
-      },
-      "complete": true
+        "grossAccrual": 4411172584,
+        "netAccrual": 2478298760,
+        "netLiquid": 1660411424,
+        "contract": 469678656,
+        "grossLiquid": 3047679620,
+        "marketAdjustment": 0,
+        "donation": 7019373,
+        "settlementTotal": 289680681,
+        "settlementInPeriod": 172285290
+      }
     },
     "downturn": {
       "name": "반도체 하락 전망",
       "totals": {
-        "grossAccrual": 236000000,
-        "netAccrual": 156414242,
-        "netLiquid": 72823356,
-        "contract": 85000000,
-        "grossLiquid": 93500000,
-        "marketAdjustment": 7086600,
-        "donation": 200000,
-        "settlementTotal": 15779396,
-        "settlementInPeriod": 0
-      },
-      "annual": [
-        {
-          "year": 2026,
-          "salary": 0,
-          "allowance": 0,
-          "gross": {
-            "salary": 85000000,
-            "opi1": 0,
-            "tai": 8500000,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "net": {
-            "salary": 66765915,
-            "opi1": 0,
-            "tai": 6057441,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "details": [
-            {
-              "id": "1:2026:tai:0",
-              "year": 2026,
-              "net": 6057441,
-              "gross": 8500000,
-              "origin": 2026,
-              "payYear": 2026,
-              "type": "tai"
-            }
-          ],
-          "reasons": [],
-          "netTotal": 72823356,
-          "grossTotal": 93500000,
-          "cumulative": 72823356
-        }
-      ],
-      "locked": {
-        "unpaidStock": 42519600,
-        "paidLockedStock": 0,
-        "totalStock": 42519600,
-        "unpaidCash": 41071286,
-        "normalUnpaidCash": 25291890,
-        "settlementAfterPeriod": 15779396,
-        "settlementReceivable": 16773255,
-        "settlementPayable": 993859,
-        "settlementEvents": [
-          {
-            "id": "1:2026:opi2:tax",
-            "origin": 2026,
-            "payYear": 2027,
-            "year": 2028,
-            "type": "settlement",
-            "kind": "tax",
-            "net": 16773255,
-            "gross": 16773255,
-            "assumptionOnly": true
-          },
-          {
-            "id": "1:2026:opi2:insurance",
-            "origin": 2026,
-            "payYear": 2027,
-            "year": 2028,
-            "type": "settlement",
-            "kind": "insurance",
-            "net": -993859,
-            "gross": -993859,
-            "assumptionOnly": true
-          }
-        ]
-      },
-      "complete": true
+        "grossAccrual": 2855463499,
+        "netAccrual": 1663571848,
+        "netLiquid": 1254665817,
+        "contract": 469678656,
+        "grossLiquid": 2199177384,
+        "marketAdjustment": 0,
+        "donation": 3907955,
+        "settlementTotal": 166739308,
+        "settlementInPeriod": 109069549
+      }
     },
     "custom": {
       "name": "사용자 지정",
       "totals": {
-        "grossAccrual": 236000000,
-        "netAccrual": 156414242,
-        "netLiquid": 72823356,
-        "contract": 85000000,
-        "grossLiquid": 93500000,
-        "marketAdjustment": 7086600,
-        "donation": 200000,
-        "settlementTotal": 15779396,
-        "settlementInPeriod": 0
-      },
-      "annual": [
-        {
-          "year": 2026,
-          "salary": 0,
-          "allowance": 0,
-          "gross": {
-            "salary": 85000000,
-            "opi1": 0,
-            "tai": 8500000,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "net": {
-            "salary": 66765915,
-            "opi1": 0,
-            "tai": 6057441,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "details": [
-            {
-              "id": "1:2026:tai:0",
-              "year": 2026,
-              "net": 6057441,
-              "gross": 8500000,
-              "origin": 2026,
-              "payYear": 2026,
-              "type": "tai"
-            }
-          ],
-          "reasons": [],
-          "netTotal": 72823356,
-          "grossTotal": 93500000,
-          "cumulative": 72823356
-        }
-      ],
-      "locked": {
-        "unpaidStock": 42519600,
-        "paidLockedStock": 0,
-        "totalStock": 42519600,
-        "unpaidCash": 41071286,
-        "normalUnpaidCash": 25291890,
-        "settlementAfterPeriod": 15779396,
-        "settlementReceivable": 16773255,
-        "settlementPayable": 993859,
-        "settlementEvents": [
-          {
-            "id": "1:2026:opi2:tax",
-            "origin": 2026,
-            "payYear": 2027,
-            "year": 2028,
-            "type": "settlement",
-            "kind": "tax",
-            "net": 16773255,
-            "gross": 16773255,
-            "assumptionOnly": true
-          },
-          {
-            "id": "1:2026:opi2:insurance",
-            "origin": 2026,
-            "payYear": 2027,
-            "year": 2028,
-            "type": "settlement",
-            "kind": "insurance",
-            "net": -993859,
-            "gross": -993859,
-            "assumptionOnly": true
-          }
-        ]
-      },
-      "complete": true
+        "grossAccrual": 4411172584,
+        "netAccrual": 2478298760,
+        "netLiquid": 1660411424,
+        "contract": 469678656,
+        "grossLiquid": 3047679620,
+        "marketAdjustment": 0,
+        "donation": 7019373,
+        "settlementTotal": 289680681,
+        "settlementInPeriod": 172285290
+      }
     }
   },
-  "inputPresetComparison": {
-    "basic": {
-      "name": "중간 전망",
-      "totals": {
-        "grossAccrual": 236000000,
-        "netAccrual": 156414242,
-        "netLiquid": 72823356,
-        "contract": 85000000,
-        "grossLiquid": 93500000,
-        "marketAdjustment": 7086600,
-        "donation": 200000,
-        "settlementTotal": 15779396,
-        "settlementInPeriod": 0
-      },
-      "annual": [
-        {
-          "year": 2026,
-          "salary": 0,
-          "allowance": 0,
-          "gross": {
-            "salary": 85000000,
-            "opi1": 0,
-            "tai": 8500000,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "net": {
-            "salary": 66765915,
-            "opi1": 0,
-            "tai": 6057441,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "details": [
-            {
-              "id": "1:2026:tai:0",
-              "year": 2026,
-              "net": 6057441,
-              "gross": 8500000,
-              "origin": 2026,
-              "payYear": 2026,
-              "type": "tai"
-            }
-          ],
-          "reasons": [],
-          "netTotal": 72823356,
-          "grossTotal": 93500000,
-          "cumulative": 72823356
-        }
-      ]
-    },
-    "conservative": {
-      "name": "반도체 하락 전망",
-      "totals": {
-        "grossAccrual": 236000000,
-        "netAccrual": 156414242,
-        "netLiquid": 72823356,
-        "contract": 85000000,
-        "grossLiquid": 93500000,
-        "marketAdjustment": 7086600,
-        "donation": 200000,
-        "settlementTotal": 15779396,
-        "settlementInPeriod": 0
-      },
-      "annual": [
-        {
-          "year": 2026,
-          "salary": 0,
-          "allowance": 0,
-          "gross": {
-            "salary": 85000000,
-            "opi1": 0,
-            "tai": 8500000,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "net": {
-            "salary": 66765915,
-            "opi1": 0,
-            "tai": 6057441,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "details": [
-            {
-              "id": "1:2026:tai:0",
-              "year": 2026,
-              "net": 6057441,
-              "gross": 8500000,
-              "origin": 2026,
-              "payYear": 2026,
-              "type": "tai"
-            }
-          ],
-          "reasons": [],
-          "netTotal": 72823356,
-          "grossTotal": 93500000,
-          "cumulative": 72823356
-        }
-      ]
-    },
-    "optimistic": {
-      "name": "낙관 사용자 조정 예시 ×1.25",
-      "totals": {
-        "grossAccrual": 236000000,
-        "netAccrual": 156414242,
-        "netLiquid": 72823356,
-        "contract": 85000000,
-        "grossLiquid": 93500000,
-        "marketAdjustment": 7086600,
-        "donation": 200000,
-        "settlementTotal": 15779396,
-        "settlementInPeriod": 0
-      },
-      "annual": [
-        {
-          "year": 2026,
-          "salary": 0,
-          "allowance": 0,
-          "gross": {
-            "salary": 85000000,
-            "opi1": 0,
-            "tai": 8500000,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "net": {
-            "salary": 66765915,
-            "opi1": 0,
-            "tai": 6057441,
-            "opi2": 0,
-            "psu": 0,
-            "settlement": 0
-          },
-          "details": [
-            {
-              "id": "1:2026:tai:0",
-              "year": 2026,
-              "net": 6057441,
-              "gross": 8500000,
-              "origin": 2026,
-              "payYear": 2026,
-              "type": "tai"
-            }
-          ],
-          "reasons": [],
-          "netTotal": 72823356,
-          "grossTotal": 93500000,
-          "cumulative": 72823356
-        }
-      ]
-    }
-  },
-  "opi2PolicyReview": {
-    "mode": "review",
-    "modelStatus": "definition_review_required",
-    "rows": [
-      {
-        "originYear": 2026,
-        "basisYear": 2026,
-        "basisModel": "사용자 제공 2026 기초금액 조건",
-        "futureAssumption": false,
-        "contractSalary": 85000000,
-        "workBonus": 15000000,
-        "workBonusInputPurpose": "전년도 성과에 따라 지급되는 업무성과급 · 특별성과급 기초금액 전용 입력, 별도 현금항목으로 재합산하지 않음",
-        "basis": 100000000,
-        "grade": "CL3",
-        "rating": null,
-        "gradeMultiplier": 1,
-        "rate": 1,
-        "rateScope": "personal",
-        "divisionMultiplier": 1,
-        "studyMultiplier": 1,
-        "preliminaryGross": 100000000,
-        "withholding": null,
-        "grossDeductionExample": {
-          "gross": 100000000,
-          "tax": 49500000,
-          "insurance": 4967000,
-          "donation": 200000,
-          "stockBudget": 45333000,
-          "withholdingTotal": 54467000,
-          "deductionTotal": 54667000,
-          "pensionIncluded": false,
-          "finalAnnualTax": null,
-          "finalAnnualInsurance": null,
-          "laterRefundOrExtraCharge": null,
-          "settlementDate": null
-        },
-        "withholdingAlternatives": [
-          {
-            "key": "gross_reported_insurance_gross",
-            "name": "가정 A: 공제전 환산주수 신고 · 세금 종가 근로소득 Y · 보험 총 지급액 G",
-            "assumptionOnly": true,
-            "confirmed": false,
-            "reportedFractionalShares": 1000,
-            "reportedEmploymentIncomeExample": 120000000,
-            "tax": 59400000,
-            "insurance": 4967000,
-            "insuranceBase": "gross",
-            "donation": 200000,
-            "stockBudget": 35433000,
-            "unfundedDeduction": 0,
-            "netFractionalShares": 354.33,
-            "actualDeliveredShares": null,
-            "finalAnnualTax": null,
-            "laterCashSettlement": null,
-            "releaseExamples": [
-              {
-                "availableDate": "2027-04-01",
-                "amount": 11811000
-              },
-              {
-                "availableDate": "2028-04-01",
-                "amount": 11811000
-              },
-              {
-                "availableDate": "2029-04-01",
-                "amount": 11811000
-              }
-            ],
-            "reportedDefinition": "gross_equivalent",
-            "taxBase": "employment_income"
-          },
-          {
-            "key": "net_reported_insurance_gross",
-            "name": "가정 B: 공제후 환산주수 신고 · 세금 Y · 보험 G",
-            "assumptionOnly": true,
-            "confirmed": false,
-            "reportedFractionalShares": 594.9372647427855,
-            "reportedEmploymentIncomeExample": 71392472,
-            "tax": 35339274,
-            "insurance": 4967000,
-            "insuranceBase": "gross",
-            "donation": 200000,
-            "stockBudget": 59493726,
-            "unfundedDeduction": 0,
-            "netFractionalShares": 594.93726,
-            "actualDeliveredShares": null,
-            "finalAnnualTax": null,
-            "laterCashSettlement": null,
-            "releaseExamples": [
-              {
-                "availableDate": "2027-04-01",
-                "amount": 19831242
-              },
-              {
-                "availableDate": "2028-04-01",
-                "amount": 19831242
-              },
-              {
-                "availableDate": "2029-04-01",
-                "amount": 19831242
-              }
-            ],
-            "reportedDefinition": "net_delivered",
-            "taxBase": "employment_income"
-          },
-          {
-            "key": "net_reported_insurance_income",
-            "name": "가정 C: 공제후 환산주수 신고 · 세금 Y · 보험 Y",
-            "assumptionOnly": true,
-            "confirmed": false,
-            "reportedFractionalShares": 603.5302285190409,
-            "reportedEmploymentIncomeExample": 72423627,
-            "tax": 35849695,
-            "insurance": 3597282,
-            "insuranceBase": "employment_income",
-            "donation": 200000,
-            "stockBudget": 60353023,
-            "unfundedDeduction": 0,
-            "netFractionalShares": 603.53023,
-            "actualDeliveredShares": null,
-            "finalAnnualTax": null,
-            "laterCashSettlement": null,
-            "releaseExamples": [
-              {
-                "availableDate": "2027-04-01",
-                "amount": 20117675
-              },
-              {
-                "availableDate": "2028-04-01",
-                "amount": 20117674
-              },
-              {
-                "availableDate": "2029-04-01",
-                "amount": 20117674
-              }
-            ],
-            "reportedDefinition": "net_delivered",
-            "taxBase": "employment_income"
-          },
-          {
-            "key": "gross_equivalent_gross_gross",
-            "name": "공제전 환산주수 신고 · 세금 G · 보험 G",
-            "assumptionOnly": true,
-            "confirmed": false,
-            "reportedFractionalShares": 1000,
-            "reportedEmploymentIncomeExample": 120000000,
-            "tax": 49500000,
-            "insurance": 4967000,
-            "insuranceBase": "gross",
-            "donation": 200000,
-            "stockBudget": 45333000,
-            "unfundedDeduction": 0,
-            "netFractionalShares": 453.33,
-            "actualDeliveredShares": null,
-            "finalAnnualTax": null,
-            "laterCashSettlement": null,
-            "releaseExamples": [
-              {
-                "availableDate": "2027-04-01",
-                "amount": 15111000
-              },
-              {
-                "availableDate": "2028-04-01",
-                "amount": 15111000
-              },
-              {
-                "availableDate": "2029-04-01",
-                "amount": 15111000
-              }
-            ],
-            "reportedDefinition": "gross_equivalent",
-            "taxBase": "gross"
-          },
-          {
-            "key": "gross_equivalent_gross_employment_income",
-            "name": "공제전 환산주수 신고 · 세금 G · 보험 Y",
-            "assumptionOnly": true,
-            "confirmed": false,
-            "reportedFractionalShares": 1000,
-            "reportedEmploymentIncomeExample": 120000000,
-            "tax": 49500000,
-            "insurance": 5960400,
-            "insuranceBase": "employment_income",
-            "donation": 200000,
-            "stockBudget": 44339600,
-            "unfundedDeduction": 0,
-            "netFractionalShares": 443.396,
-            "actualDeliveredShares": null,
-            "finalAnnualTax": null,
-            "laterCashSettlement": null,
-            "releaseExamples": [
-              {
-                "availableDate": "2027-04-01",
-                "amount": 14779867
-              },
-              {
-                "availableDate": "2028-04-01",
-                "amount": 14779867
-              },
-              {
-                "availableDate": "2029-04-01",
-                "amount": 14779866
-              }
-            ],
-            "reportedDefinition": "gross_equivalent",
-            "taxBase": "gross"
-          },
-          {
-            "key": "gross_equivalent_employment_income_employment_income",
-            "name": "공제전 환산주수 신고 · 세금 Y · 보험 Y",
-            "assumptionOnly": true,
-            "confirmed": false,
-            "reportedFractionalShares": 1000,
-            "reportedEmploymentIncomeExample": 120000000,
-            "tax": 59400000,
-            "insurance": 5960400,
-            "insuranceBase": "employment_income",
-            "donation": 200000,
-            "stockBudget": 34439600,
-            "unfundedDeduction": 0,
-            "netFractionalShares": 344.396,
-            "actualDeliveredShares": null,
-            "finalAnnualTax": null,
-            "laterCashSettlement": null,
-            "releaseExamples": [
-              {
-                "availableDate": "2027-04-01",
-                "amount": 11479867
-              },
-              {
-                "availableDate": "2028-04-01",
-                "amount": 11479867
-              },
-              {
-                "availableDate": "2029-04-01",
-                "amount": 11479866
-              }
-            ],
-            "reportedDefinition": "gross_equivalent",
-            "taxBase": "employment_income"
-          },
-          {
-            "key": "net_delivered_gross_gross",
-            "name": "공제후 환산주수 신고 · 세금 G · 보험 G",
-            "assumptionOnly": true,
-            "confirmed": false,
-            "reportedFractionalShares": 453.33,
-            "reportedEmploymentIncomeExample": 54399600,
-            "tax": 49500000,
-            "insurance": 4967000,
-            "insuranceBase": "gross",
-            "donation": 200000,
-            "stockBudget": 45333000,
-            "unfundedDeduction": 0,
-            "netFractionalShares": 453.33,
-            "actualDeliveredShares": null,
-            "finalAnnualTax": null,
-            "laterCashSettlement": null,
-            "releaseExamples": [
-              {
-                "availableDate": "2027-04-01",
-                "amount": 15111000
-              },
-              {
-                "availableDate": "2028-04-01",
-                "amount": 15111000
-              },
-              {
-                "availableDate": "2029-04-01",
-                "amount": 15111000
-              }
-            ],
-            "reportedDefinition": "net_delivered",
-            "taxBase": "gross"
-          },
-          {
-            "key": "net_delivered_gross_employment_income",
-            "name": "공제후 환산주수 신고 · 세금 G · 보험 Y",
-            "assumptionOnly": true,
-            "confirmed": false,
-            "reportedFractionalShares": 474.70564475030295,
-            "reportedEmploymentIncomeExample": 56964677,
-            "tax": 49500000,
-            "insurance": 2829436,
-            "insuranceBase": "employment_income",
-            "donation": 200000,
-            "stockBudget": 47470564,
-            "unfundedDeduction": 0,
-            "netFractionalShares": 474.70564,
-            "actualDeliveredShares": null,
-            "finalAnnualTax": null,
-            "laterCashSettlement": null,
-            "releaseExamples": [
-              {
-                "availableDate": "2027-04-01",
-                "amount": 15823522
-              },
-              {
-                "availableDate": "2028-04-01",
-                "amount": 15823521
-              },
-              {
-                "availableDate": "2029-04-01",
-                "amount": 15823521
-              }
-            ],
-            "reportedDefinition": "net_delivered",
-            "taxBase": "gross"
-          }
-        ],
-        "selectedWithholdingScenario": {
-          "key": "gross_reported_insurance_gross",
-          "name": "가정 A: 공제전 환산주수 신고 · 세금 종가 근로소득 Y · 보험 총 지급액 G",
-          "assumptionOnly": true,
-          "confirmed": false,
-          "reportedFractionalShares": 1000,
-          "reportedEmploymentIncomeExample": 120000000,
-          "tax": 59400000,
-          "insurance": 4967000,
-          "insuranceBase": "gross",
-          "donation": 200000,
-          "stockBudget": 35433000,
-          "unfundedDeduction": 0,
-          "netFractionalShares": 354.33,
-          "actualDeliveredShares": null,
-          "finalAnnualTax": null,
-          "laterCashSettlement": null,
-          "releaseExamples": [
-            {
-              "availableDate": "2027-04-01",
-              "amount": 11811000
-            },
-            {
-              "availableDate": "2028-04-01",
-              "amount": 11811000
-            },
-            {
-              "availableDate": "2029-04-01",
-              "amount": 11811000
-            }
-          ],
-          "reportedDefinition": "gross_equivalent",
-          "taxBase": "employment_income"
-        },
-        "reportedSharesDefinitionConfirmed": false,
-        "prices": {
-          "vwapWeek": 100000,
-          "vwapMonth": 100000,
-          "vwapTwoMonths": 100000,
-          "mean": {
-            "numerator": 300000,
-            "denominator": 3
-          },
-          "closingPrice": 120000,
-          "salePriceAssumption": "지급일 종가 유지 매각 가정"
-        },
-        "shares": {
-          "fractionalGrossShares": 1000,
-          "fractionalNetShares": 354.33,
-          "actualDeliveredShares": null,
-          "roundingPolicy": "미확인",
-          "reportedDefinition": "gross_equivalent"
-        },
-        "shareIncomeCandidates": {
-          "grossEquivalent": 120000000,
-          "netDeliveredEquivalent": 42519600,
-          "note": "선택 공제 가정의 정의 비교. 실제 주식수·신고소득 확정 아님."
-        },
-        "reportedEmploymentIncome": null,
-        "confirmedIncomeReportYear": null,
-        "payment": {
-          "actualDate": null,
-          "assumedDate": "2027-04-01",
-          "expectedYear": 2027,
-          "expectedWindow": "3월말~4월초 · 정기 주총 의결 이후",
-          "exactDateConfirmed": false
-        },
-        "releases": [
-          {
-            "tranche": 1,
-            "availableDate": null,
-            "assumedAvailableDate": "2027-04-01",
-            "expectedYear": 2027,
-            "amount": null,
-            "valuationOnly": true,
-            "confirmedDate": false
-          },
-          {
-            "tranche": 2,
-            "availableDate": null,
-            "assumedAvailableDate": "2028-04-01",
-            "expectedYear": 2028,
-            "amount": null,
-            "valuationOnly": true,
-            "confirmedDate": false
-          },
-          {
-            "tranche": 3,
-            "availableDate": null,
-            "assumedAvailableDate": "2029-04-01",
-            "expectedYear": 2029,
-            "amount": null,
-            "valuationOnly": true,
-            "confirmedDate": false
-          }
-        ],
-        "pending": true,
-        "reasons": [
-          "공제전 환산주수 해석은 합리적 추론·기본 가정이며 회사 계산예시 확인 대기",
-          "49.5% 세금·4.967% 보험료의 G 또는 종가 근로소득 Y 산정기준 확인 대기",
-          "실제 지급일 미확정: 3월말~4월초 예상 (정기 주총 의결 이후)",
-          "실제 입고주수·최종 세무 정산 모델 확인 대기"
-        ],
-        "confirmedCompensation": null,
-        "confirmedLiquidCashflow": null,
-        "rateSource": "direct",
-        "zeroReason": null,
-        "expectedRateIsEstimate": false
-      }
-    ],
-    "withholdingIsNotFinalTax": true,
-    "payoutSnapshot": null,
-    "assumedPayoutPreviews": [
-      {
-        "originYear": 2026,
-        "snapshot": {
-          "assumptionOnly": true,
-          "reportedSharesDefinitionConfirmed": false,
-          "gross": 100000000,
-          "benchmarkStockBudget": 35433000,
-          "reportedFractionalShares": 1000,
-          "estimatedNetFractionalShares": 354.33,
-          "actualDeliveredShares": null,
-          "reportedEmploymentIncome": 120000000,
-          "withheldTax": 59400000,
-          "withheldInsurance": 4967000,
-          "donation": 200000,
-          "referencePrice": {
-            "numerator": 300000,
-            "denominator": 3
-          },
-          "deliveryClose": 120000,
-          "estimatedStockMarketValue": 42519600,
-          "fundingShortfall": 0,
-          "salePriceAssumption": "지급일 종가 유지 매각 가정"
-        },
-        "identity": {
-          "costIdentity": {
-            "gross": 100000000,
-            "donation": 200000,
-            "withheldTax": 59400000,
-            "withheldInsurance": 4967000,
-            "stockBudget": 35433000,
-            "difference": 0
-          },
-          "marketAdjustment": 7086600,
-          "settlementTax": 16773255,
-          "settlementInsurance": -993859,
-          "finalEconomicValue": 58298996,
-          "valuationIdentityDifference": 0
-        },
-        "finalTaxEstimate": 42626745,
-        "finalInsuranceEstimate": 5960859,
-        "settlements": [
-          {
-            "id": "1:2026:opi2:tax",
-            "origin": 2026,
-            "payYear": 2027,
-            "year": 2028,
-            "type": "settlement",
-            "kind": "tax",
-            "net": 16773255,
-            "gross": 16773255,
-            "assumptionOnly": true
-          },
-          {
-            "id": "1:2026:opi2:insurance",
-            "origin": 2026,
-            "payYear": 2027,
-            "year": 2028,
-            "type": "settlement",
-            "kind": "insurance",
-            "net": -993859,
-            "gross": -993859,
-            "assumptionOnly": true
-          }
-        ]
-      }
-    ],
-    "cashSettlementLedger": {
-      "status": "planning_estimate",
-      "events": [
-        {
-          "id": "1:2026:opi2:tax",
-          "origin": 2026,
-          "payYear": 2027,
-          "year": 2028,
-          "type": "settlement",
-          "kind": "tax",
-          "net": 16773255,
-          "gross": 16773255,
-          "assumptionOnly": true
-        },
-        {
-          "id": "1:2026:opi2:insurance",
-          "origin": 2026,
-          "payYear": 2027,
-          "year": 2028,
-          "type": "settlement",
-          "kind": "insurance",
-          "net": -993859,
-          "gross": -993859,
-          "assumptionOnly": true
-        }
-      ],
-      "doesNotRewriteDeliveredShares": true,
-      "taxTiming": "기본 과세연도 다음해 현금 정산 가정",
-      "insuranceTiming": "기본 지급연도 다음해 현금 정산 가정 · 실제 보험 결정/정산 시차 미반영"
-    },
-    "excludedFromFinalAnnualTotals": true,
-    "disclaimer": "사용자 제공 15시 공개 내용의 입력·검토본입니다. 회사 미확인 조건을 명시적 가정으로 선택해 총보상·현금흐름을 추정합니다. 실제 입고주수·최종 납부액은 확정값이 아닙니다. 49.5% 세금 및 4.967% 보험료는 지급전 선제징수이며 최종 연간 세금·보험료와 별개의 원장입니다. 환급·추가징수는 최종 누진세·보험료 추정과의 차이를 기본 다음해 현금 정산하는 시나리오이며 주식수를 변경하거나 이중 차감하지 않습니다."
-  },
-  "accounting": {
-    "opening": 0,
-    "netAccrual": 156414242,
-    "netLiquid": 72823356,
-    "closingStock": 42519600,
-    "closingCash": 41071286,
-    "difference": 0,
-    "complete": true
-  },
-  "complete": true,
-  "pendingOrigins": [],
-  "calculationWarnings": [],
-  "confirmed": {
-    "deliveredShares": null,
-    "annualCompensation": null,
-    "annualCashflow": null,
-    "finalTax": null
-  },
-  "disclaimer": "예상치이며 실제 지급액·세금과 다를 수 있음 공제전 주수·선징수 기준·미래 반복·최종 세금 및 정산은 선택한 추정 가정. 지급일 종가 유지 매각 가정. 실제 보험료 결정/정산 및 원천징수 시차·연말정산 공제는 미반영. 생활비·부동산 비용 차감 전 · 수수료·매각세금0원 가정."
+  "disclaimer": "예상치이며 실제 지급액·세금과 다를 수 있음. 연간 소득 합산 누진세 추정, 다음해 지급과 현금 정산, 단일 평가가격 유지 가정. 생활비·부동산 비용은 차감하지 않은 총유입액."
 }

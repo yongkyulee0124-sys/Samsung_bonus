@@ -1,7 +1,7 @@
 // Planning estimates: delivery withholding and later cash settlement are distinct.
 // No company-confirmed share quantity or final administrative tax is invented.
 import {calculate as legacyCalculate,defaults,validateState,salaryAt,taxAndInsurance,allocate,split3,mul,ratio,sum,years,TYPES,DISCLAIMER} from './engine.js';
-import {calculatePolicyDraft,plusYears} from './policy.js';
+import {calculatePolicyDraft,plusYears,normalizeSimpleState} from './policy.js';
 const clone=structuredClone;
 const zero=()=>Object.fromEntries(TYPES.map(t=>[t,0]));
 const row=year=>({year,salary:0,allowance:0,gross:zero(),net:zero(),details:[],reasons:[]});
@@ -9,21 +9,22 @@ const taxTotal=t=>sum([t.income,t.local]);
 const signedRatio=(amount,n,d)=>amount<0?-ratio(-amount,n,d):ratio(amount,n,d);
 
 export function buildPolicyLedger(s,scenario=s.scenarios[s.activeScenario]){
- const q=clone(s),p=q.opi2Policy,c=q.settings,person=q.people[0];q.startYear=q.dataStartYear;
+ const q=clone(s);if(q.opi2Policy.simpleInput)normalizeSimpleState(q);const p=q.opi2Policy,c=q.settings,person=q.people[0];q.startYear=q.dataStartYear;
  const zeroReasons={};
  if(p.rateSource==='legacy')p.rateScope='personal';
  for(let y=q.dataStartYear;y<=q.endYear;y++){
   const performance=scenario.performance[y]??0,threshold=c.thresholds[y]??(y<=2028?200:100);
-  const reason=scenario.unpaid[y]||scenario.opi2Factor===0?'사용자 미지급 가정':p.rateSource==='legacy'&&performance<threshold?'지급 기준 미달':null;
+  const manual=p.simpleInput&&Object.hasOwn(p.manualGrossByYear,y);const reason=manual?(p.manualGrossByYear[y]===0?'사용자 입력 0원':null):scenario.unpaid[y]||scenario.opi2Factor===0?'사용자 미지급 가정':p.rateSource==='legacy'&&performance<threshold?'지급 기준 미달':null;
   zeroReasons[y]=reason;
   if(p.rateSource==='legacy')p.paymentRateByYear[y]=reason?0:ratio(c.opi2Base,mul(1000000,performance),mul(1000000,c.performanceBase),c.coefficients[person.division],scenario.opi2Factor)/c.salaryBase;
  }
  const ledger=calculatePolicyDraft(q,{salaryForYear:y=>salaryAt(person,y,q),multiply:mul,splitAmount:split3,grossForYear:({year,basis,gradeMultiplier,divisionMultiplier,studyMultiplier,rate})=>{
+  if(p.simpleInput&&Object.hasOwn(p.manualGrossByYear,year))return p.manualGrossByYear[year];
   if(zeroReasons[year])return 0;
   if(p.rateSource==='legacy')return ratio(c.opi2Base,BigInt(mul(1000000,scenario.performance[year]??0))*BigInt(basis),BigInt(mul(1000000,c.performanceBase))*BigInt(c.salaryBase),c.coefficients[person.division],gradeMultiplier,studyMultiplier,scenario.opi2Factor);
   return mul(basis,rate,gradeMultiplier,divisionMultiplier,studyMultiplier,scenario.opi2Factor);
  }});
- for(const r of ledger.rows){r.rateSource=p.rateSource;r.zeroReason=zeroReasons[r.originYear];r.expectedRateIsEstimate=p.rateSource==='legacy';r.prices.salePriceAssumption='지급일 종가 유지 매각 가정';}
+ for(const r of ledger.rows){r.inputMethod=p.simpleInput&&Object.hasOwn(p.manualGrossByYear,r.originYear)?'manual_final_gross':'automatic_forecast';r.rateSource=p.rateSource;r.zeroReason=zeroReasons[r.originYear];r.expectedRateIsEstimate=p.rateSource==='legacy';r.prices.salePriceAssumption='지급일 종가 유지 매각 가정';}
  return ledger;
 }
 
@@ -35,7 +36,7 @@ export function awardIdentity({gross,donation,withheldTax,withheldInsurance,stoc
 }
 
 export function calculateIntegrated(s,scenario=s.scenarios[s.activeScenario]){
- validateState(s);const c=s.settings,p=s.people[0],policy=s.opi2Policy;
+ if(s.opi2Policy.simpleInput)s=normalizeSimpleState(clone(s));validateState(s);const c=s.settings,p=s.people[0],policy=s.opi2Policy;
  const old=legacyCalculate(s,scenario).people[0],ledger=buildPolicyLedger(s,scenario),accrual=[];
  for(let y=s.dataStartYear;y<=s.endYear;y++){const a=row(y);a.salary=salaryAt(p,y,s);a.allowance=p.allowance;a.gross.salary=sum([a.salary,a.allowance]);accrual.push(a);}
  const events=old.events.filter(e=>e.type!=='opi2').map(e=>({id:e.id,personId:e.personId,type:e.type,origin:e.origin,payYear:e.payYear,gross:e.gross,taxableIncome:e.gross,liquidYears:e.liquidYears}));
@@ -94,4 +95,14 @@ export function calculateIntegrated(s,scenario=s.scenarios[s.activeScenario]){
 export const calculatePlan=(s,scenario)=>s.opi2Policy.mode==='review'?calculateIntegrated(s,scenario):legacyCalculate(s,scenario);
 export const comparePlan=s=>Object.fromEntries(Object.entries(s.scenarios).map(([k,v])=>[k,calculatePlan(s,v)]));
 export function comparePresetsPlan(s){const base=defaults().scenarios.middle,down=defaults().scenarios.downturn,opt=clone(base);opt.name='낙관 사용자 조정 예시 ×1.25';for(const y of years(s))opt.performance[y]=(base.performance[y]??0)*1.25;return {basic:calculatePlan(s,base),conservative:calculatePlan(s,down),optimistic:calculatePlan(s,opt)};}
-export function exportIntegrated(s){const r=calculateIntegrated(s);return {schemaVersion:2,input:clone(s),resultModel:r.resultModel,assumptions:{settings:clone(s.settings),policy:clone(s.opi2Policy),period:r.period,confirmedAnnualTotals:null,confirmedLiquidCashflow:null,disclaimer:r.disclaimer},people:r.people,performanceScenario:r.scenario,annualAccrualCompensation:r.accrual,annualLiquidCashflow:r.cashflow,openingCompensationBalance:r.opening,lockedStockAfter2030:{asOf:s.endYear,...r.locked},cashSettlementAfterPeriod:r.locked.settlementEvents,scenarioComparison:Object.fromEntries(Object.entries(comparePlan(s)).map(([k,v])=>[k,{name:v.scenario.name,totals:v.totals,annual:v.cashflow,locked:v.locked,complete:v.complete}])),inputPresetComparison:Object.fromEntries(Object.entries(comparePresetsPlan(s)).map(([k,v])=>[k,{name:v.scenario.name,totals:v.totals,annual:v.cashflow}])),opi2PolicyReview:r.policyLedger,accounting:r.accounting,complete:r.complete,pendingOrigins:r.pendingOrigins,calculationWarnings:r.calculationWarnings,confirmed:r.confirmed,disclaimer:r.disclaimer+' 생활비·부동산 비용 차감 전 · 수수료·매각세금0원 가정.'};}
+function exportDetailedIntegrated(s){const r=calculateIntegrated(s);return {schemaVersion:2,input:clone(s),resultModel:r.resultModel,assumptions:{settings:clone(s.settings),policy:clone(s.opi2Policy),period:r.period,confirmedAnnualTotals:null,confirmedLiquidCashflow:null,disclaimer:r.disclaimer},people:r.people,performanceScenario:r.scenario,annualAccrualCompensation:r.accrual,annualLiquidCashflow:r.cashflow,openingCompensationBalance:r.opening,lockedStockAfter2030:{asOf:s.endYear,...r.locked},cashSettlementAfterPeriod:r.locked.settlementEvents,scenarioComparison:Object.fromEntries(Object.entries(comparePlan(s)).map(([k,v])=>[k,{name:v.scenario.name,totals:v.totals,annual:v.cashflow,locked:v.locked,complete:v.complete}])),inputPresetComparison:Object.fromEntries(Object.entries(comparePresetsPlan(s)).map(([k,v])=>[k,{name:v.scenario.name,totals:v.totals,annual:v.cashflow}])),opi2PolicyReview:r.policyLedger,accounting:r.accounting,complete:r.complete,pendingOrigins:r.pendingOrigins,calculationWarnings:r.calculationWarnings,confirmed:r.confirmed,disclaimer:r.disclaimer+' 생활비·부동산 비용 차감 전 · 수수료·매각세금0원 가정.'};}
+
+export function exportIntegrated(s){
+ if(!s.opi2Policy.simpleInput)return exportDetailedIntegrated(s);
+ const clean=normalizeSimpleState(clone(s)),d=exportDetailedIntegrated(clean),simple={simpleInput:true,manualGrossByYear:clone(clean.opi2Policy.manualGrossByYear),donationRate:clean.opi2Policy.donationRate};
+ d.input.opi2Policy=simple;
+ d.assumptions.policy={...simple,workBonus:0,withholdingTaxRate:.495,withholdingInsuranceRate:.04967,withholdingBase:'gross',donationBase:'gross',price:clean.people[0].psuPrice>0?clean.people[0].psuPrice:250000,priceAssumption:'하나의 평가가격 유지',paymentAssumption:'성과 다음 해 4월 1일 예정',stockRelease:'지급해/1년 뒤/2년 뒤 각 1/3',cashSettlement:'과세 다음 해 현금 정산',manualAward:'고과·소속·연수 등이 이미 반영된 최종 세전액; 추가 배수 없음'};
+ d.specialCompensation=d.opi2PolicyReview.rows.map(r=>({year:r.originYear,inputMethod:r.inputMethod,gross:r.preliminaryGross,zeroReason:r.zeroReason}));delete d.opi2PolicyReview;
+ d.disclaimer='예상치이며 실제 지급액·세금과 다를 수 있음. 연간 소득 합산 누진세 추정, 다음해 지급과 현금 정산, 단일 평가가격 유지 가정. 생활비·부동산 비용은 차감하지 않은 총유입액.';
+ return JSON.parse(JSON.stringify(d,(k,v)=>['policyRow','withholdingAlternatives','shareIncomeCandidates'].includes(k)?undefined:v));
+}

@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {defaults,calculate,exportData,parseImport,sum,mul,split3,allocate} from '../dist/engine.js';
+import {defaults as publicDefaults,calculate,exportData,parseImport,sum,mul,split3,allocate} from '../dist/engine.js';
 import {calculateIntegrated,awardIdentity,buildPolicyLedger,comparePlan} from '../dist/integrated.js';
 import {unionExampleCheck} from '../dist/reference-check.js';
 function toy(close=100000){const s=defaults();s.people[0].division='메모리';s.endYear=2026;s.people[0].includePSU=false;s.settings.opi1Rate=0;s.settings.taiRate=0;Object.assign(s.opi2Policy,{rateSource:'direct',rateScope:'personal',paymentRateByYear:{2026:1},workBonusByYear:{2026:15000000},vwapWeekByYear:{2026:100000},vwapMonthByYear:{2026:100000},vwapTwoMonthsByYear:{2026:100000},closingPriceByYear:{2026:close}});return s;}
@@ -34,3 +34,6 @@ test('integrated2028/29 unpaid plus PSU600 scenario regression',()=>{const s=def
 test('integrated2028/29 unpaid plus PSU0 scenario regression',()=>{const s=defaults(),scenario=structuredClone(s.scenarios.downturn);scenario.psuMode='zero';const r=calculateIntegrated(s,scenario);assert.deepEqual(r.cashflow.map(c=>c.netTotal),[72823356,172113522,337071407,360793625,228881160]);assert.equal(r.totals.netLiquid,1171683070);invariants(r);});
 
 test('missing VWAP/close stays pending with warning while known salary and other cohorts remain usable',()=>{const s=defaults();delete s.opi2Policy.vwapWeekByYear[2026];delete s.opi2Policy.closingPriceByYear[2027];const r=calculateIntegrated(s);assert.equal(r.complete,false);assert.deepEqual(r.pendingOrigins.map(a=>a.origin),[2026,2027]);assert.ok(r.accrual[0].opi2Pending);assert.ok(r.totals.netLiquid>0);assert.equal(r.confirmed.deliveredShares,null);invariants(r);});
+
+// Historical model regression fixture; the public UI uses the simplified inputs.
+function defaults(){const s=publicDefaults();s.opi2Policy.simpleInput=false;return s;}

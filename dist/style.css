@@ -2,3 +2,5 @@
 .panel,.person,.people,.grid>*,.highlight,.metrics-grid>*{min-width:0}.table-wrap{width:100%}.people>*{min-width:0}
 
 .policy-inputs{margin:18px 0;border-top:1px solid var(--line);padding-top:18px}.policy-inputs .field{min-width:110px}.policy-inputs input[type=date]{min-width:160px}.policy-inputs .year-form select{min-width:150px}
+
+.special-rows{display:grid;gap:8px;margin:12px 0}.special-row{display:grid;grid-template-columns:64px minmax(180px,1fr) minmax(150px,1fr);gap:16px;align-items:center;padding:12px 14px;background:#0b1c2c;border:1px solid var(--line);border-radius:10px}.special-row .field{margin:0}.special-row input{width:100%;box-sizing:border-box}.special-method{color:var(--muted);font-size:12px}.special-row strong{color:var(--stock)}@media(max-width:600px){.special-row{grid-template-columns:40px minmax(0,1fr);gap:8px;padding:10px}.special-method{grid-column:2}.special-row .field label{font-size:11px}}

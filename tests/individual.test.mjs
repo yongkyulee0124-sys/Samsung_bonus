@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {defaults,defaultPerson,calculate,validationReport,allocate,split3,salaryAt,taxAndInsurance,workDeduction,exportData,parseImport,importConditions,validateState,sum,mul} from '../dist/engine.js';
+import {defaults as publicDefaults,defaultPerson,calculate,validationReport,allocate,split3,salaryAt,taxAndInsurance,workDeduction,exportData,parseImport,importConditions,validateState,sum,mul} from '../dist/engine.js';
 const copy=x=>JSON.parse(JSON.stringify(x));
 function conservation(r){assert.equal(r.people.length,1);assert.equal(r.opening.total+r.totals.netAccrual,r.totals.netLiquid+r.locked.unpaidCash+r.locked.unpaidStock+r.locked.paidLockedStock);for(const p of r.people){for(const e of p.events){assert.equal(sum(e.tranches.map(t=>t.net)),e.net);assert.equal(sum(e.tranches.map(t=>t.gross)),e.gross);assert.equal(e.net+e.deduction,e.gross);assert.ok(Number.isSafeInteger(e.net));}for(const t of p.taxLog){assert.equal(sum(t.allocation.map(e=>e.deduction)),t.increment);assert.equal(t.baseGross-t.baseTax.total+sum(t.allocation.map(e=>e.net)),t.baseGross+t.bonus-t.fullTax.total);}}}
 test('individual v2 generic defaults contain one person and no private preset',()=>{const s=defaults();assert.equal(s.schemaVersion,2);assert.equal(s.mode,'individual');assert.equal(s.people.length,1);assert.equal(s.people[0].salary,85000000);assert.equal(s.people[0].allowance,0);assert.deepEqual(s.people[0].study,{});validateState(s);});
@@ -30,3 +30,6 @@ test('all key option combinations preserve tax and timing ledgers',()=>{let coun
 test('pension employee rate stops at 6.5% after 2033; actual paid override is shared by base and full incomes',()=>{const s=defaults(),t=s.settings.tax;assert.equal(taxAndInsurance(85000000,2033,t).pensionRate,.065);assert.equal(taxAndInsurance(85000000,2040,t).pensionRate,.065);t.pensionPaidByYear[2026]=1200000;const r=calculate(s),log=r.people[0].taxLog.find(t=>t.year===2026);assert.equal(log.baseTax.pension,1200000);assert.equal(log.fullTax.pension,1200000);assert.equal(taxAndInsurance(85000000,2027,t).pension,3954000);conservation(r);assert.deepEqual(parseImport(JSON.stringify(s)),s);t.pensionPaidByYear[2026]=-1;assert.throws(()=>validateState(s));});
 
 test('common coefficient applies to whole memory-equivalent OPI2 value',()=>{const s=defaults();s.people[0].division='메모리';const memory=calculate(s).accrual[0].gross.opi2;s.people[0].division='공통';assert.equal(calculate(s).accrual[0].gross.opi2,mul(memory,.7));s.people[0].division='파운드리·시스템LSI';assert.equal(calculate(s).accrual[0].gross.opi2,mul(memory,.3));});
+
+// Historical model regression fixture; the public UI uses the simplified inputs.
+function defaults(){const s=publicDefaults();s.opi2Policy.simpleInput=false;return s;}
