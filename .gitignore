@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.openai/
+.sites-runtime/
+qa/
+*.log
+site-deploy.tar.gz
