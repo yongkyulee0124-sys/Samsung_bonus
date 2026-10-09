@@ -1,0 +1,46 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "browser": "Chrome headless fresh isolated profile",
+  "desktop": {
+    "width": 1440,
+    "height": 1000
+  },
+  "mobile": {
+    "width": 390,
+    "height": 844
+  },
+  "passed": 28,
+  "checks": [
+    "new default donation0 and six choices, no manual gross controls",
+    "new profit defaults370550500 with automatic2026gross466.2m",
+    "main totals are OPI1+OPI2 only and full-pay result separated last",
+    "four charts with bonus-only legends and estimate notices",
+    "refund before/after separated and tax2028February independent of stock",
+    "company-source attribution and uncertainty are explicit",
+    "donation selection 0 applies only gross-based expense",
+    "donation selection 0.002 applies only gross-based expense",
+    "donation selection 0.004 applies only gross-based expense",
+    "donation selection 0.006 applies only gross-based expense",
+    "donation selection 0.008 applies only gross-based expense",
+    "donation selection 0.01 applies only gross-based expense",
+    "zero donation save and reload preserved",
+    "automatic division 메모리",
+    "automatic division 공통",
+    "automatic division 파운드리·시스템LSI",
+    "study zeros OPI1 and halves original division OPI2",
+    "old manual0 removed, stored donation/profit retained and migration explained",
+    "JSON exports bonus scope, before/after and final full-pay summary",
+    "CSV bonus annual and signed tax/insurance sections with separate full-pay",
+    "summary fallback exports bonus-only totals with full-pay last",
+    "negative tax and insurance reduce cash and remain separately signed",
+    "2028 settlement excluded at2027boundary and remains claim/liability",
+    "narrow period preserves opening compensation cohorts",
+    "PSU0 excluded from main but final-summary/tax model preserved",
+    "cash table shows annual/cumulative and independent tax/insurance",
+    "mobile page has no overflow and input remains donation-only",
+    "reset restores0donation and370550500 with numeric bonus totals"
+  ],
+  "errors": [],
+  "clipboard": "permission denial fallback verified",
+  "downloads": "Blob verified; native OS save dialog not exercised"
+}

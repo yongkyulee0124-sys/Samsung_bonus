@@ -36,4 +36,4 @@ test('integrated2028/29 unpaid plus PSU0 scenario regression',()=>{const s=defau
 test('missing VWAP/close stays pending with warning while known salary and other cohorts remain usable',()=>{const s=defaults();delete s.opi2Policy.vwapWeekByYear[2026];delete s.opi2Policy.closingPriceByYear[2027];const r=calculateIntegrated(s);assert.equal(r.complete,false);assert.deepEqual(r.pendingOrigins.map(a=>a.origin),[2026,2027]);assert.ok(r.accrual[0].opi2Pending);assert.ok(r.totals.netLiquid>0);assert.equal(r.confirmed.deliveredShares,null);invariants(r);});
 
 // Historical model regression fixture; the public UI uses the simplified inputs.
-function defaults(){const s=publicDefaults();s.opi2Policy.simpleInput=false;return s;}
+function defaults(){const s=publicDefaults();s.opi2Policy.simpleInput=false;s.opi2Policy.donationRate=.002;for(const sc of Object.values(s.scenarios))sc.performance={2026:389,2027:567,2028:576,2029:518,2030:466};return s;}

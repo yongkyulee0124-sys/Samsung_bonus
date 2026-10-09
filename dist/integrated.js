@@ -65,7 +65,7 @@ export function calculateIntegrated(s,scenario=s.scenarios[s.activeScenario]){
    e.identity=identity;e.marketAdjustment=identity.marketAdjustment;e.net=identity.finalEconomicValue;
    const taxYear=policy.taxSettlementYearByOrigin[e.origin]??e.payYear+policy.taxSettlementDelay,insuranceYear=policy.insuranceSettlementYearByOrigin[e.origin]??e.payYear+policy.insuranceSettlementDelay;
    if(taxYear<e.payYear||insuranceYear<e.payYear)throw Error('정산연도는 과세·지급연도 이후여야 합니다');
-   e.settlements=[{id:e.id+':tax',origin:e.origin,payYear:e.payYear,year:taxYear,type:'settlement',kind:'tax',net:identity.settlementTax,gross:identity.settlementTax,assumptionOnly:true},{id:e.id+':insurance',origin:e.origin,payYear:e.payYear,year:insuranceYear,type:'settlement',kind:'insurance',net:identity.settlementInsurance,gross:identity.settlementInsurance,assumptionOnly:true}];
+   e.settlements=[{id:e.id+':tax',origin:e.origin,payYear:e.payYear,year:taxYear,type:'settlement',kind:'tax',estimatedMonth:2,timingAssumption:'과세 다음 해 2월 계산용 가정 · 삼성 확정 입금일 아님',net:identity.settlementTax,gross:identity.settlementTax,assumptionOnly:true},{id:e.id+':insurance',origin:e.origin,payYear:e.payYear,year:insuranceYear,type:'settlement',kind:'insurance',estimatedMonth:4,timingAssumption:'지급 다음 해 4월 보험 차액 정산 가정 · 회사 실제 일정 미확인',net:identity.settlementInsurance,gross:identity.settlementInsurance,assumptionOnly:true}];
    settlements.push(...e.settlements);
    // An unaffordable cohort remains incomplete: no zero clamp, no imaginary shares.
    if(e.net===null){a.opi2Incomplete=true;e.tranches=[];a.reasons.push(`추가납부 필요 ${x.fundingShortfall.toLocaleString()}원 · 합계 미완료`);continue;}
@@ -89,7 +89,7 @@ export function calculateIntegrated(s,scenario=s.scenarios[s.activeScenario]){
  if(accounting.complete&&accounting.difference!==0)throw Error('통합 보상 원장 보존 실패 '+accounting.difference);
  const personResult={person:clone(p),accrual:selected,cashflow,events,taxLog,psuShares:old.psuShares,opening,locked,totals};
  ledger.assumedPayoutPreviews=events.filter(e=>e.type==='opi2').map(e=>({originYear:e.origin,snapshot:e.snapshot,identity:e.identity,finalTaxEstimate:e.finalTaxEstimate,finalInsuranceEstimate:e.finalInsuranceEstimate,settlements:e.settlements}));
- ledger.cashSettlementLedger={status:'planning_estimate',events:settlements,doesNotRewriteDeliveredShares:true,taxTiming:'기본 과세연도 다음해 현금 정산 가정',insuranceTiming:'기본 지급연도 다음해 현금 정산 가정 · 실제 보험 결정/정산 시차 미반영'};
+ ledger.cashSettlementLedger={status:'planning_estimate',events:settlements,doesNotRewriteDeliveredShares:true,taxTiming:'회사 안내를 채택한 소득 귀속 가정 · 다음 해 2월 계산용 가정; 삼성 확정 입금일 아님',insuranceTiming:'다음 해 4월 보험 차액 정산 가정 · 이미 선징수한 보험 전액을 다시 차감하지 않음; 실제 일정 미확인'};
  return {people:[personResult],accrual:selected,cashflow,events,taxLog,locked,opening,totals,policyLedger:ledger,settlementEvents:settlements,pendingOrigins,calculationWarnings,accounting,resultModel:'policy_integrated_estimate',complete:!pendingOrigins.length&&!calculationWarnings.length,confirmed:{deliveredShares:null,annualCompensation:null,annualCashflow:null,finalTax:null},scenario:clone(scenario),period:{start:s.startYear,end:s.endYear},disclaimer:DISCLAIMER+' 공제전 주수·선징수 기준·미래 반복·최종 세금 및 정산은 선택한 추정 가정. 지급일 종가 유지 매각 가정. 실제 보험료 결정/정산 및 원천징수 시차·연말정산 공제는 미반영.'};
 }
 export const calculatePlan=(s,scenario)=>s.opi2Policy.mode==='review'?calculateIntegrated(s,scenario):legacyCalculate(s,scenario);
