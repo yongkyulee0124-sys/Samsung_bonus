@@ -302,6 +302,14 @@
     "opi2Factor": 1,
     "psuMode": "normal"
   },
+  "compensationMultiples2026": {
+    "year": 2026,
+    "denominator": 85000000,
+    "denominatorDefinition": "계약연봉 + 업무성과급 (기존 원장 기준금액을 한 번만 사용, 고정수당 제외)",
+    "accrualGross": 5.984705882352941,
+    "accrualNet": 3.3219996588235294,
+    "liquidNet": 0
+  },
   "people": [
     {
       "scope": "OPI1+OPI2",

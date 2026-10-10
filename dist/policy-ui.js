@@ -1,5 +1,3 @@
-
-export function policyInputHTML(state,{select,years}){
- return '<section class="policy-inputs"><div class="panel-head"><div><h3>특별경영성과급 · 자동 예상</h3><p class="subtitle">연봉·소속·학술연수·전체 연결 영업이익 가정으로 자동 계산합니다.</p></div></div><div class="grid three">'+select('기부율','opi2Policy.donationRate',state.opi2Policy.donationRate,[0,.002,.004,.006,.008,.01].map(v=>[v,(v*100).toFixed(1)+'%']))+'</div><div class="special-rows">'+years(state).map(y=>'<div class="special-row"><strong>'+y+'</strong><span id="special-method-'+y+'">자동 계산</span></div>').join('')+'</div><p class="disclosure">예상치이며 실제 지급액·세금과 다를 수 있음. 기부0%는 기부 지출0원입니다. 기부 세액공제는 계산하지 않습니다.</p><details><summary>간단한 지급·세금 가정</summary><p class="disclosure">49.5% 선징수와 지급연도 소득 귀속은 사용자가 전달한 회사 안내를 채택한 모델 가정입니다. 세전 총액 기준 세금49.5%·보험4.967%·선택 기부율을 먼저 공제한 나머지를 자사주로 환산합니다. 성과 다음 해4월1일을 지급예정 가정으로 두고 그해/1년 뒤/2년 뒤1/3씩 매각합니다.</p><p class="disclosure">환급/추가납부는 상여 비례배분 추정 차액으로 과세 다음 해2월 현금 반영 가정입니다. 보험은 다음 해4월 별도 차액 정산 가정입니다. 회사 실제 일정은 미확인입니다. 주식수와 매각 해제액은 정산으로 바꾸지 않습니다. 주식은 PSU와 같은 한 가지 평가가격을 유지합니다.</p></details></section>';
-}
+// The former automatic preview and donation selector are intentionally absent.
+export function policyInputHTML(){return '';}
 export function policyReviewHTML(){return '';}

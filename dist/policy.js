@@ -5,17 +5,17 @@ export const CASH_TIMING_NOTICE='49.5% 세금 및 4.967% 보험료는 지급전 
 export const RATINGS={EM:1.4,ES:1.2,MT:1,MS:.9,NM:.8};
 export function policyDefaults(){const ys=[2026,2027,2028,2029,2030],map=v=>Object.fromEntries(ys.map(y=>[y,typeof v==='function'?v(y):v]));return {version:1,simpleInput:true,manualGrossByYear:{},mode:'review',rateSource:'legacy',workBonusDefinition:'confirmed_separate',reportedSharesDefinition:'gross_equivalent',taxWithholdingBase:'employment_income',insuranceWithholdingBase:'gross',repeatFutureYears:true,rateScope:'memory',withholdingTaxRate:.495,withholdingInsuranceRate:.04967,donationRate:0,taxSettlementDelay:1,insuranceSettlementDelay:1,taxSettlementYearByOrigin:{},insuranceSettlementYearByOrigin:{},gradeByYear:map('CL3'),ratingByYear:{},workBonusByYear:map(0),paymentRateByYear:{},paymentDateByYear:map(y=>(y+1)+'-04-01'),paymentDateConfirmedByYear:{},expectedPaymentYearByYear:map(y=>y+1),vwapWeekByYear:map(250000),vwapMonthByYear:map(250000),vwapTwoMonthsByYear:map(250000),closingPriceByYear:map(250000)};}
 const yearFields=['taxSettlementYearByOrigin','insuranceSettlementYearByOrigin','gradeByYear','ratingByYear','workBonusByYear','paymentRateByYear','paymentDateByYear','paymentDateConfirmedByYear','expectedPaymentYearByYear','vwapWeekByYear','vwapMonthByYear','vwapTwoMonthsByYear','closingPriceByYear'];
-// The public planner accepts only the final pretax award and donation selection.
+// The public planner keeps OPI1/OPI2 and fixes donation at zero.
 // Old hidden policy choices are discarded, never multiplied into a manual award.
 export function normalizeSimpleState(s){
- const old=s.opi2Policy??{}, gross={}, donation=old.donationRate??0;
+ const old=s.opi2Policy??{}, gross={}, donation=0;
  const p=policyDefaults();Object.assign(p,{simpleInput:true,manualGrossByYear:gross,donationRate:donation,taxWithholdingBase:'gross',insuranceWithholdingBase:'gross'});
  const price=s.people?.[0]?.psuPrice>0?s.people[0].psuPrice:250000;
  for(let y=s.dataStartYear;y<=s.endYear;y++){
   p.gradeByYear[y]='CL3';p.workBonusByYear[y]=0;p.paymentDateByYear[y]=(y+1)+'-04-01';p.expectedPaymentYearByYear[y]=y+1;
   for(const key of ['vwapWeekByYear','vwapMonthByYear','vwapTwoMonthsByYear','closingPriceByYear'])p[key][y]=price;
  }
- if(Object.keys(old.manualGrossByYear??{}).length)s.migrationNotice='구형 특별성과급 직접 금액은 제외하고 연봉·소속·연수·영업이익으로 자동 계산합니다.';s.opi2Policy=p;Object.assign(s.settings,{opi2Base:540000000,performanceBase:300,salaryBase:85000000,coefficients:{'메모리':1,'공통':.7,'파운드리·시스템LSI':.3},studyCoefficient:.5});s.settings.opi2Delay=1;s.settings.opi2PayYears={};return s;
+ if(old.donationRate)s.migrationNotice='구형 기부 비율은 적용하지 않으며 기부금은 0원으로 고정합니다.';if(Object.keys(old.manualGrossByYear??{}).length)s.migrationNotice='구형 특별성과급 직접 금액은 제외하고 연봉·소속·연수·영업이익으로 자동 계산합니다.';s.opi2Policy=p;Object.assign(s.settings,{opi2Base:540000000,performanceBase:300,salaryBase:85000000,coefficients:{'메모리':1,'공통':.7,'파운드리·시스템LSI':.3},studyCoefficient:.5});s.settings.opi2Delay=1;s.settings.opi2PayYears={};return s;
 }
 export function validateSimpleInputs(p){
  if(p.simpleInput!==undefined&&typeof p.simpleInput!=='boolean')throw Error('단순 입력 모드를 확인하세요');
