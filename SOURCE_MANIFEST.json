@@ -1,0 +1,180 @@
+{
+  "purpose": "Automatic OPI1+OPI2 calculator source; no personal family data",
+  "files": [
+    {
+      "file": "package.json",
+      "bytes": 145,
+      "sha256": "50151d4bb08b5768cee797ef99823158d548a3949da8e405fc9e33d00583b420"
+    },
+    {
+      "file": "server.mjs",
+      "bytes": 946,
+      "sha256": "c2e2f4725ec740ba340f5cde14dc3ee0991098feeb347f2d6e5cf0775a2ef216"
+    },
+    {
+      "file": "README.md",
+      "bytes": 8002,
+      "sha256": "2280a6844d8e1ee12bbfed8f8a61bc7f028450d647d311b5585e8610a69ea859"
+    },
+    {
+      "file": "QA.md",
+      "bytes": 1329,
+      "sha256": "79c0a353a610e4e22ce8ab9aa11f9c162916671bc8e916c514657a2fede4f6ed"
+    },
+    {
+      "file": "REVISION_REVIEW.md",
+      "bytes": 855,
+      "sha256": "e40cab1c55f6ccc8ca011f36976e481fe6f66faf90cd10c7b45b4a124a946e41"
+    },
+    {
+      "file": ".github/workflows/pages.yml",
+      "bytes": 714,
+      "sha256": "e99535e21191ad3bcaf4cc9bf5c789f1caab2c8592a41833792d478fdea3fe3e"
+    },
+    {
+      "file": "dist/index.html",
+      "bytes": 595,
+      "sha256": "36bee3bfaa3f604576bb12f2139735c8c73a2e37c4eb028e3b07a651aa08f81d"
+    },
+    {
+      "file": "dist/app.js",
+      "bytes": 46165,
+      "sha256": "550929f9cf11dec34fa42dfbd9f73176b514559526034bb87b7db04f3eb7f080"
+    },
+    {
+      "file": "dist/engine.js",
+      "bytes": 25604,
+      "sha256": "7fa0e1fb93770ac69c938f5fca0c4366e4bb2c88eb39307ae3c18e7ed49f039e"
+    },
+    {
+      "file": "dist/policy.js",
+      "bytes": 17295,
+      "sha256": "a18865c09074957918561874d7c69b4c5ea99be9d7aa7533755534344c2b4395"
+    },
+    {
+      "file": "dist/policy-ui.js",
+      "bytes": 173,
+      "sha256": "b21967ce3bdcca36f1a023cae503c2c88c40fb468830dd6da8ff64e0dae61fcd"
+    },
+    {
+      "file": "dist/integrated.js",
+      "bytes": 18089,
+      "sha256": "49e577c768a8f77766b51a846878a740521df7a9fa344021879167a9f2a088b7"
+    },
+    {
+      "file": "dist/integrated-ui.js",
+      "bytes": 1363,
+      "sha256": "eed49b029cff6cab08cc9ea393ab2164ddb0aa5211f081dc5149b46f4c2ee7a3"
+    },
+    {
+      "file": "dist/bonus.js",
+      "bytes": 8991,
+      "sha256": "6dfe970421e91f8bb4864dc90d60441e51cc3e147eec155181fedcebffb2a2e7"
+    },
+    {
+      "file": "dist/bonus-ui.js",
+      "bytes": 8671,
+      "sha256": "e4aceaf1e7100406b7a49902078280f9fbba791afe1cf22ee0a633d2a5a9884c"
+    },
+    {
+      "file": "dist/forecast.js",
+      "bytes": 2914,
+      "sha256": "34411fa583e3cbbaf6a002bca7c28db70d43af1efc9af54b12c170d52307c71b"
+    },
+    {
+      "file": "dist/reference-check.js",
+      "bytes": 1783,
+      "sha256": "34876f7490479906dc32ff3030bcce098cd2074e61a9fd27bbee93d897a9b0d2"
+    },
+    {
+      "file": "dist/style.css",
+      "bytes": 12168,
+      "sha256": "7023a5e9a76fce70f5503bd6537bd50f6c6019f664fc528905e90f669eed1fd1"
+    },
+    {
+      "file": "dist/README.md",
+      "bytes": 8002,
+      "sha256": "2280a6844d8e1ee12bbfed8f8a61bc7f028450d647d311b5585e8610a69ea859"
+    },
+    {
+      "file": "dist/QA.md",
+      "bytes": 1329,
+      "sha256": "79c0a353a610e4e22ce8ab9aa11f9c162916671bc8e916c514657a2fede4f6ed"
+    },
+    {
+      "file": "dist/REVISION_REVIEW.md",
+      "bytes": 855,
+      "sha256": "e40cab1c55f6ccc8ca011f36976e481fe6f66faf90cd10c7b45b4a124a946e41"
+    },
+    {
+      "file": "dist/validation.json",
+      "bytes": 11309,
+      "sha256": "d8bebc008cbcd36bb5f54c112befb6eac5f761077700b3e6f20ab99ec7639c67"
+    },
+    {
+      "file": "dist/validation.csv",
+      "bytes": 808,
+      "sha256": "107206765618b0282ba7c9fcf31d773b56e9a812caf678b82b532ab93391d416"
+    },
+    {
+      "file": "dist/integrated-validation.json",
+      "bytes": 11309,
+      "sha256": "d8bebc008cbcd36bb5f54c112befb6eac5f761077700b3e6f20ab99ec7639c67"
+    },
+    {
+      "file": "dist/union-example-validation.json",
+      "bytes": 1771,
+      "sha256": "7b142b8cbae76a77b7f20a31e5bdfeda729c7de1e9de5c861c5bdbadff7b1814"
+    },
+    {
+      "file": "dist/policy-review-example.json",
+      "bytes": 27512,
+      "sha256": "134c02851d64e0bd090c4fbc3188197c6333038c828f32cf094651d36947c503"
+    },
+    {
+      "file": "tests/individual.test.mjs",
+      "bytes": 12371,
+      "sha256": "a68185c7fec42db607f2b11d16bc15808f1201484b6e815ca9a0bcde1002137b"
+    },
+    {
+      "file": "tests/policy.test.mjs",
+      "bytes": 12791,
+      "sha256": "7582daa0514a213b6c99f2db898b796b33d465069d45f93e43b8dfa01bbcc7fe"
+    },
+    {
+      "file": "tests/integrated.test.mjs",
+      "bytes": 14572,
+      "sha256": "c61fbb8ee725e4e725a0d9c0b50cb57bba5f6ec62b07e7813c34ed19f359b806"
+    },
+    {
+      "file": "tests/bonus.test.mjs",
+      "bytes": 7795,
+      "sha256": "672510ab7290400022f96a19a1dd2e92c3af39bc6814430955cf739c7403f135"
+    },
+    {
+      "file": "tests/fixed-inputs.test.mjs",
+      "bytes": 3457,
+      "sha256": "191779e43785a0edcdd8133b31202968fd6b6b5fd8ef18172558268af0548757"
+    },
+    {
+      "file": "tests/forecast-basis-psu.test.mjs",
+      "bytes": 8097,
+      "sha256": "22c37da7a916204ee529134a32150119e62fa7f54fa9d82ae73487898631a8ae"
+    },
+    {
+      "file": "tests/total-display.test.mjs",
+      "bytes": 3253,
+      "sha256": "d23bdff6735ac923479acafe129d7a941f51068c091acb6e3fcade9111833d1b"
+    },
+    {
+      "file": "qa/browser-qa-total.mjs",
+      "bytes": 20239,
+      "sha256": "60245a0a4195051f5826bef90b9117e15e33bc688880a7f68bb6a44759f3dbff"
+    },
+    {
+      "file": "qa/total-browser-report.json",
+      "bytes": 2635,
+      "sha256": "12b0dd795e1d641cf3259843f126b3e39a165c2f1ae3eeae45baa3fb71cd0289"
+    }
+  ]
+}
