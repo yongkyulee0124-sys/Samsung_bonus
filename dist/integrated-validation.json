@@ -12,15 +12,15 @@
     "middle": {
       "scope": "OPI1+OPI2+PSU",
       "totals": {
-        "grossAccrual": 3742519662,
-        "netAccrual": 2016740148,
-        "netLiquid": 1211908457,
-        "netLiquidBeforeSettlement": 1048622827,
-        "taxSettlementInPeriod": 163292860,
-        "insuranceSettlementInPeriod": -7230,
-        "taxRefundInPeriod": 163292860,
+        "grossAccrual": 4188067709,
+        "netAccrual": 2244656530,
+        "netLiquid": 1341110378,
+        "netLiquidBeforeSettlement": 1162994139,
+        "taxSettlementInPeriod": 178124432,
+        "insuranceSettlementInPeriod": -8193,
+        "taxRefundInPeriod": 178124432,
         "taxExtraPaymentInPeriod": 0,
-        "settlementInPeriod": 163285630,
+        "settlementInPeriod": 178116239,
         "donation": 0
       },
       "annual": [
@@ -37,98 +37,98 @@
         },
         {
           "year": 2027,
-          "opi1": 23590964,
-          "opi2": 70758282,
+          "opi1": 23392215,
+          "opi2": 80147566,
           "psu": 0,
-          "beforeSettlement": 94349246,
+          "beforeSettlement": 103539781,
           "taxSettlement": 0,
           "insuranceSettlement": 0,
-          "afterSettlement": 94349246,
-          "cumulative": 94349246
+          "afterSettlement": 103539781,
+          "cumulative": 103539781
         },
         {
           "year": 2028,
-          "opi1": 23986266,
-          "opi2": 181198574,
-          "psu": 26875369,
-          "beforeSettlement": 232060209,
-          "taxSettlement": 46505945,
-          "insuranceSettlement": -1784,
-          "afterSettlement": 278564370,
-          "cumulative": 372913616
+          "opi1": 23864496,
+          "opi2": 205242754,
+          "psu": 26738931,
+          "beforeSettlement": 255846181,
+          "taxSettlement": 50207597,
+          "insuranceSettlement": -2022,
+          "afterSettlement": 306051756,
+          "cumulative": 409591537
         },
         {
           "year": 2029,
-          "opi1": 25179290,
-          "opi2": 286618852,
-          "psu": 26868655,
-          "beforeSettlement": 338666797,
-          "taxSettlement": 59799155,
-          "insuranceSettlement": -2786,
-          "afterSettlement": 398463166,
-          "cumulative": 771376782
+          "opi1": 25053142,
+          "opi2": 324651797,
+          "psu": 26734044,
+          "beforeSettlement": 376438983,
+          "taxSettlement": 65485157,
+          "insuranceSettlement": -3157,
+          "afterSettlement": 441920983,
+          "cumulative": 851512520
         },
         {
           "year": 2030,
-          "opi1": 26290912,
-          "opi2": 330536748,
-          "psu": 26718915,
-          "beforeSettlement": 383546575,
-          "taxSettlement": 56987760,
-          "insuranceSettlement": -2660,
-          "afterSettlement": 440531675,
-          "cumulative": 1211908457
+          "opi1": 26172863,
+          "opi2": 374397387,
+          "psu": 26598944,
+          "beforeSettlement": 427169194,
+          "taxSettlement": 62431678,
+          "insuranceSettlement": -3014,
+          "afterSettlement": 489597858,
+          "cumulative": 1341110378
         }
       ],
       "accrual": [
         {
           "year": 2026,
           "opi1": 42500000,
-          "opi2": 466200000,
+          "opi2": 528062500,
           "psu": 0,
-          "grossTotal": 508700000,
-          "netTotal": 282369971
+          "grossTotal": 570562500,
+          "netTotal": 314040488
         },
         {
           "year": 2027,
           "opi1": 44625000,
-          "opi2": 727650000,
+          "opi2": 824205659,
           "psu": 0,
-          "grossTotal": 772275000,
-          "netTotal": 415103509
+          "grossTotal": 868830659,
+          "netTotal": 464632059
         },
         {
           "year": 2028,
           "opi1": 46856250,
-          "opi2": 694575000,
+          "opi2": 786741765,
           "psu": 50000000,
-          "grossTotal": 791431250,
-          "netTotal": 425300594
+          "grossTotal": 883598015,
+          "netTotal": 472447865
         },
         {
           "year": 2029,
           "opi1": 49199063,
-          "opi2": 755558685,
+          "opi2": 855817692,
           "psu": 50000000,
-          "grossTotal": 854757748,
-          "netTotal": 456913735
+          "grossTotal": 955016755,
+          "netTotal": 508183857
         },
         {
           "year": 2030,
           "opi1": 51659016,
-          "opi2": 713696648,
+          "opi2": 808400764,
           "psu": 50000000,
-          "grossTotal": 815355664,
-          "netTotal": 437052339
+          "grossTotal": 910059780,
+          "netTotal": 485352261
         }
       ],
       "closing": {
-        "unpaidStock": 324967494,
-        "paidLockedStock": 334772635,
-        "normalUnpaidCash": 27696171,
-        "settlementAfterPeriod": 117395391,
-        "settlementReceivable": 117401019,
-        "settlementPayable": 5628,
+        "unpaidStock": 368089120,
+        "paidLockedStock": 379195354,
+        "normalUnpaidCash": 27554765,
+        "settlementAfterPeriod": 128706913,
+        "settlementReceivable": 128713286,
+        "settlementPayable": 6373,
         "settlementEvents": [
           {
             "id": "1:2029:opi2:tax",
@@ -139,8 +139,8 @@
             "kind": "tax",
             "estimatedMonth": 2,
             "timingAssumption": "과세 다음 해 2월 계산용 가정 · 삼성 확정 입금일 아님",
-            "net": 59728526,
-            "gross": 59728526,
+            "net": 65600758,
+            "gross": 65600758,
             "assumptionOnly": true
           },
           {
@@ -152,8 +152,8 @@
             "kind": "insurance",
             "estimatedMonth": 4,
             "timingAssumption": "지급 다음 해 4월 보험 차액 정산 가정 · 회사 실제 일정 미확인",
-            "net": -2894,
-            "gross": -2894,
+            "net": -3277,
+            "gross": -3277,
             "assumptionOnly": true
           },
           {
@@ -165,8 +165,8 @@
             "kind": "tax",
             "estimatedMonth": 2,
             "timingAssumption": "과세 다음 해 2월 계산용 가정 · 삼성 확정 입금일 아님",
-            "net": 57672493,
-            "gross": 57672493,
+            "net": 63112528,
+            "gross": 63112528,
             "assumptionOnly": true
           },
           {
@@ -178,35 +178,35 @@
             "kind": "insurance",
             "estimatedMonth": 4,
             "timingAssumption": "지급 다음 해 4월 보험 차액 정산 가정 · 회사 실제 일정 미확인",
-            "net": -2734,
-            "gross": -2734,
+            "net": -3096,
+            "gross": -3096,
             "assumptionOnly": true
           }
         ],
-        "totalStock": 659740129,
-        "unpaidCash": 145091562
+        "totalStock": 747284474,
+        "unpaidCash": 156261678
       },
       "accounting": {
         "opening": 0,
-        "netAccrual": 2016740148,
-        "netLiquid": 1211908457,
-        "closingStock": 659740129,
-        "closingCash": 145091562,
+        "netAccrual": 2244656530,
+        "netLiquid": 1341110378,
+        "closingStock": 747284474,
+        "closingCash": 156261678,
         "difference": 0
       }
     },
     "custom": {
       "scope": "OPI1+OPI2+PSU",
       "totals": {
-        "grossAccrual": 3742519662,
-        "netAccrual": 2016740148,
-        "netLiquid": 1211908457,
-        "netLiquidBeforeSettlement": 1048622827,
-        "taxSettlementInPeriod": 163292860,
-        "insuranceSettlementInPeriod": -7230,
-        "taxRefundInPeriod": 163292860,
+        "grossAccrual": 4188067709,
+        "netAccrual": 2244656530,
+        "netLiquid": 1341110378,
+        "netLiquidBeforeSettlement": 1162994139,
+        "taxSettlementInPeriod": 178124432,
+        "insuranceSettlementInPeriod": -8193,
+        "taxRefundInPeriod": 178124432,
         "taxExtraPaymentInPeriod": 0,
-        "settlementInPeriod": 163285630,
+        "settlementInPeriod": 178116239,
         "donation": 0
       },
       "annual": [
@@ -223,98 +223,98 @@
         },
         {
           "year": 2027,
-          "opi1": 23590964,
-          "opi2": 70758282,
+          "opi1": 23392215,
+          "opi2": 80147566,
           "psu": 0,
-          "beforeSettlement": 94349246,
+          "beforeSettlement": 103539781,
           "taxSettlement": 0,
           "insuranceSettlement": 0,
-          "afterSettlement": 94349246,
-          "cumulative": 94349246
+          "afterSettlement": 103539781,
+          "cumulative": 103539781
         },
         {
           "year": 2028,
-          "opi1": 23986266,
-          "opi2": 181198574,
-          "psu": 26875369,
-          "beforeSettlement": 232060209,
-          "taxSettlement": 46505945,
-          "insuranceSettlement": -1784,
-          "afterSettlement": 278564370,
-          "cumulative": 372913616
+          "opi1": 23864496,
+          "opi2": 205242754,
+          "psu": 26738931,
+          "beforeSettlement": 255846181,
+          "taxSettlement": 50207597,
+          "insuranceSettlement": -2022,
+          "afterSettlement": 306051756,
+          "cumulative": 409591537
         },
         {
           "year": 2029,
-          "opi1": 25179290,
-          "opi2": 286618852,
-          "psu": 26868655,
-          "beforeSettlement": 338666797,
-          "taxSettlement": 59799155,
-          "insuranceSettlement": -2786,
-          "afterSettlement": 398463166,
-          "cumulative": 771376782
+          "opi1": 25053142,
+          "opi2": 324651797,
+          "psu": 26734044,
+          "beforeSettlement": 376438983,
+          "taxSettlement": 65485157,
+          "insuranceSettlement": -3157,
+          "afterSettlement": 441920983,
+          "cumulative": 851512520
         },
         {
           "year": 2030,
-          "opi1": 26290912,
-          "opi2": 330536748,
-          "psu": 26718915,
-          "beforeSettlement": 383546575,
-          "taxSettlement": 56987760,
-          "insuranceSettlement": -2660,
-          "afterSettlement": 440531675,
-          "cumulative": 1211908457
+          "opi1": 26172863,
+          "opi2": 374397387,
+          "psu": 26598944,
+          "beforeSettlement": 427169194,
+          "taxSettlement": 62431678,
+          "insuranceSettlement": -3014,
+          "afterSettlement": 489597858,
+          "cumulative": 1341110378
         }
       ],
       "accrual": [
         {
           "year": 2026,
           "opi1": 42500000,
-          "opi2": 466200000,
+          "opi2": 528062500,
           "psu": 0,
-          "grossTotal": 508700000,
-          "netTotal": 282369971
+          "grossTotal": 570562500,
+          "netTotal": 314040488
         },
         {
           "year": 2027,
           "opi1": 44625000,
-          "opi2": 727650000,
+          "opi2": 824205659,
           "psu": 0,
-          "grossTotal": 772275000,
-          "netTotal": 415103509
+          "grossTotal": 868830659,
+          "netTotal": 464632059
         },
         {
           "year": 2028,
           "opi1": 46856250,
-          "opi2": 694575000,
+          "opi2": 786741765,
           "psu": 50000000,
-          "grossTotal": 791431250,
-          "netTotal": 425300594
+          "grossTotal": 883598015,
+          "netTotal": 472447865
         },
         {
           "year": 2029,
           "opi1": 49199063,
-          "opi2": 755558685,
+          "opi2": 855817692,
           "psu": 50000000,
-          "grossTotal": 854757748,
-          "netTotal": 456913735
+          "grossTotal": 955016755,
+          "netTotal": 508183857
         },
         {
           "year": 2030,
           "opi1": 51659016,
-          "opi2": 713696648,
+          "opi2": 808400764,
           "psu": 50000000,
-          "grossTotal": 815355664,
-          "netTotal": 437052339
+          "grossTotal": 910059780,
+          "netTotal": 485352261
         }
       ],
       "closing": {
-        "unpaidStock": 324967494,
-        "paidLockedStock": 334772635,
-        "normalUnpaidCash": 27696171,
-        "settlementAfterPeriod": 117395391,
-        "settlementReceivable": 117401019,
-        "settlementPayable": 5628,
+        "unpaidStock": 368089120,
+        "paidLockedStock": 379195354,
+        "normalUnpaidCash": 27554765,
+        "settlementAfterPeriod": 128706913,
+        "settlementReceivable": 128713286,
+        "settlementPayable": 6373,
         "settlementEvents": [
           {
             "id": "1:2029:opi2:tax",
@@ -325,8 +325,8 @@
             "kind": "tax",
             "estimatedMonth": 2,
             "timingAssumption": "과세 다음 해 2월 계산용 가정 · 삼성 확정 입금일 아님",
-            "net": 59728526,
-            "gross": 59728526,
+            "net": 65600758,
+            "gross": 65600758,
             "assumptionOnly": true
           },
           {
@@ -338,8 +338,8 @@
             "kind": "insurance",
             "estimatedMonth": 4,
             "timingAssumption": "지급 다음 해 4월 보험 차액 정산 가정 · 회사 실제 일정 미확인",
-            "net": -2894,
-            "gross": -2894,
+            "net": -3277,
+            "gross": -3277,
             "assumptionOnly": true
           },
           {
@@ -351,8 +351,8 @@
             "kind": "tax",
             "estimatedMonth": 2,
             "timingAssumption": "과세 다음 해 2월 계산용 가정 · 삼성 확정 입금일 아님",
-            "net": 57672493,
-            "gross": 57672493,
+            "net": 63112528,
+            "gross": 63112528,
             "assumptionOnly": true
           },
           {
@@ -364,20 +364,20 @@
             "kind": "insurance",
             "estimatedMonth": 4,
             "timingAssumption": "지급 다음 해 4월 보험 차액 정산 가정 · 회사 실제 일정 미확인",
-            "net": -2734,
-            "gross": -2734,
+            "net": -3096,
+            "gross": -3096,
             "assumptionOnly": true
           }
         ],
-        "totalStock": 659740129,
-        "unpaidCash": 145091562
+        "totalStock": 747284474,
+        "unpaidCash": 156261678
       },
       "accounting": {
         "opening": 0,
-        "netAccrual": 2016740148,
-        "netLiquid": 1211908457,
-        "closingStock": 659740129,
-        "closingCash": 145091562,
+        "netAccrual": 2244656530,
+        "netLiquid": 1341110378,
+        "closingStock": 747284474,
+        "closingCash": 156261678,
         "difference": 0
       }
     }

@@ -1,51 +1,67 @@
 {
-  "status": "assumption_comparison_not_official_validation",
-  "basis": "총 영업이익370조원 · 계약연봉8,200만원 · 업무성과급0원 · CL3/고과1 · 세전 OPI2 예시로 해석",
+  "status": "rounded_article_case_comparison_not_official_formula",
+  "source": "https://www.segye.com/newsView/20261010501154",
+  "basis": "보도 총액은 OPI1+OPI2 합계입니다. 기사 연봉은 8,000만원대 초반으로 정확한 값이 없어, 8,000만원·OPI1 50%를 계산용으로 가정합니다. 메모리 예시만 기준으로 삼고 공통70%·파운드리30% 계수는 유지합니다. 다른 사업부 기사 총액의 오차를 정밀 계수로 역산하지 않습니다. 회사 확정 지급률이 아니며 이후 연도 비례 외삽도 사용자 재정계획 가정입니다.",
   "rows": [
     {
       "division": "메모리",
-      "contractSalary": 82000000,
-      "workBonusInput": 0,
-      "performance": 370,
+      "illustrativeSalary": 80000000,
+      "corporateProfit": 370,
+      "dsEligibility": "explicit_threshold_met_assumption_not_corporate_gate",
       "coefficient": 1,
-      "estimatedGross": 642494118,
-      "relayedApproximateTarget": 750000000,
-      "difference": -107505882,
-      "requiredBasisIfTargetIsPretax": 95720721,
-      "requiredWorkBonusIfTargetIsPretax": 13720721
+      "opi1Gross": 40000000,
+      "opi2Gross": 710000000,
+      "estimatedGrossTotal": 750000000,
+      "reportedApproximateTotal": 750000000,
+      "difference": 0,
+      "relativeDifference": 0,
+      "deliveredStockValue": 323284300,
+      "firstSale": 107761434,
+      "articleFirstSaleRoundingDifference": 1
     },
     {
       "division": "공통",
-      "contractSalary": 82000000,
-      "workBonusInput": 0,
-      "performance": 370,
+      "illustrativeSalary": 80000000,
+      "corporateProfit": 370,
+      "dsEligibility": "explicit_threshold_met_assumption_not_corporate_gate",
       "coefficient": 0.7,
-      "estimatedGross": 449745882,
-      "relayedApproximateTarget": 530000000,
-      "difference": -80254118,
-      "requiredBasisIfTargetIsPretax": 96632347,
-      "requiredWorkBonusIfTargetIsPretax": 14632347
+      "opi1Gross": 40000000,
+      "opi2Gross": 497000000,
+      "estimatedGrossTotal": 537000000,
+      "reportedApproximateTotal": 530000000,
+      "difference": 7000000,
+      "relativeDifference": 0.013207547169811321,
+      "deliveredStockValue": 226299010,
+      "firstSale": 75433004,
+      "articleFirstSaleRoundingDifference": null
     },
     {
       "division": "파운드리·시스템LSI",
-      "contractSalary": 82000000,
-      "workBonusInput": 0,
-      "performance": 370,
+      "illustrativeSalary": 80000000,
+      "corporateProfit": 370,
+      "dsEligibility": "explicit_threshold_met_assumption_not_corporate_gate",
       "coefficient": 0.3,
-      "estimatedGross": 192748235,
-      "relayedApproximateTarget": 240000000,
-      "difference": -47251765,
-      "requiredBasisIfTargetIsPretax": 102102102,
-      "requiredWorkBonusIfTargetIsPretax": 20102102
+      "opi1Gross": 40000000,
+      "opi2Gross": 213000000,
+      "estimatedGrossTotal": 253000000,
+      "reportedApproximateTotal": 240000000,
+      "difference": 13000000,
+      "relativeDifference": 0.05416666666666667,
+      "deliveredStockValue": 96985290,
+      "firstSale": 32328430,
+      "articleFirstSaleRoundingDifference": null
     }
   ],
-  "memoryTargetImpliedCommon": 525000000,
-  "memoryTargetImpliedFoundry": 225000000,
-  "foundryToMemoryTargetRatio": 0.32,
-  "unknowns": [
-    "노조 안내 원문·정확한 계약연봉·업무성과급",
-    "전달 금액이 세전인지 세후인지",
-    "사업부별 최종 지급률·반올림"
+  "legacyFormula": {
+    "opi2Base": 540000000,
+    "profitBase": 300,
+    "salaryBase": 85000000
+  },
+  "limitations": [
+    "정확한 기사 기준 연봉·업무성과급 미확인",
+    "부서 기사 금액은 반올림된 추산이며 공통70%·파운드리30%와 정확히 일치하지 않음",
+    "DS 이익10.5%·40/60 풀 배분은 인원·급여총액 없이 개인 지급률로 전환 불가",
+    "연도별 확정 지급률 및 2027 확정 보험료율·실제 지급/정산일 미확인"
   ],
-  "disclaimer": "사용자 전달 대략 예시입니다. 계수나 기준값을 이 금액에 맞추지 않았습니다."
+  "disclaimer": "예상치이며 실제 지급액·세금과 다를 수 있음"
 }

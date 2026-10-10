@@ -2,6 +2,7 @@
 // No company-confirmed share quantity or final administrative tax is invented.
 import {calculate as legacyCalculate,defaults,validateState,salaryAt,taxAndInsurance,allocate,split3,mul,ratio,sum,years,TYPES,DISCLAIMER} from './engine.js';
 import {calculatePolicyDraft,plusYears,normalizeSimpleState} from './policy.js';
+import {dsGate,ARTICLE_MODEL} from './article-model.js';
 const clone=structuredClone;
 const zero=()=>Object.fromEntries(TYPES.map(t=>[t,0]));
 const row=year=>({year,salary:0,allowance:0,gross:zero(),net:zero(),details:[],reasons:[]});
@@ -10,11 +11,12 @@ const signedRatio=(amount,n,d)=>amount<0?-ratio(-amount,n,d):ratio(amount,n,d);
 
 export function buildPolicyLedger(s,scenario=s.scenarios[s.activeScenario]){
  const q=clone(s);if(q.opi2Policy.simpleInput)normalizeSimpleState(q);const p=q.opi2Policy,c=q.settings,person=q.people[0];q.startYear=q.dataStartYear;
- const zeroReasons={};
+ const zeroReasons={},gates={};
  if(p.rateSource==='legacy')p.rateScope='personal';
  for(let y=q.dataStartYear;y<=q.endYear;y++){
   const performance=scenario.performance[y]??0,threshold=c.thresholds[y]??(y<=2028?200:100);
-  const manual=p.simpleInput&&Object.hasOwn(p.manualGrossByYear,y);const reason=manual?(p.manualGrossByYear[y]===0?'사용자 입력 0원':null):scenario.unpaid[y]||scenario.opi2Factor===0?'사용자 미지급 가정':p.rateSource==='legacy'&&performance<threshold?'지급 기준 미달':null;
+  const gate=gates[y]=p.simpleInput?dsGate(q,scenario,y):null;
+  const manual=p.simpleInput&&Object.hasOwn(p.manualGrossByYear,y);const reason=manual?(p.manualGrossByYear[y]===0?'사용자 입력 0원':null):scenario.unpaid[y]||scenario.opi2Factor===0?'사용자 미지급 가정':p.simpleInput?(gate.status==='below'||gate.status==='unpaid'?gate.reason:null):p.rateSource==='legacy'&&performance<threshold?'지급 기준 미달':null;
   zeroReasons[y]=reason;
   if(p.rateSource==='legacy')p.paymentRateByYear[y]=reason?0:ratio(c.opi2Base,mul(1000000,performance),mul(1000000,c.performanceBase),c.coefficients[person.division],scenario.opi2Factor)/c.salaryBase;
  }
@@ -24,7 +26,7 @@ export function buildPolicyLedger(s,scenario=s.scenarios[s.activeScenario]){
   if(p.rateSource==='legacy')return ratio(c.opi2Base,BigInt(mul(1000000,scenario.performance[year]??0))*BigInt(basis),BigInt(mul(1000000,c.performanceBase))*BigInt(c.salaryBase),c.coefficients[person.division],gradeMultiplier,studyMultiplier,scenario.opi2Factor);
   return mul(basis,rate,gradeMultiplier,divisionMultiplier,studyMultiplier,scenario.opi2Factor);
  }});
- for(const r of ledger.rows){r.inputMethod=p.simpleInput&&Object.hasOwn(p.manualGrossByYear,r.originYear)?'manual_final_gross':'automatic_forecast';r.rateSource=p.rateSource;r.zeroReason=zeroReasons[r.originYear];r.expectedRateIsEstimate=p.rateSource==='legacy';r.prices.salePriceAssumption='지급일 종가 유지 매각 가정';}
+ for(const r of ledger.rows){r.inputMethod=p.simpleInput&&Object.hasOwn(p.manualGrossByYear,r.originYear)?'manual_final_gross':'automatic_forecast';r.rateSource=p.rateSource;r.zeroReason=zeroReasons[r.originYear];r.expectedRateIsEstimate=p.rateSource==='legacy';r.prices.salePriceAssumption='지급일 종가 유지 매각 가정';if(p.simpleInput){r.dsEligibility=gates[r.originYear];r.articleModel=ARTICLE_MODEL;if(r.dsEligibility.status==='pending'){r.preliminaryGross=null;r.selectedWithholdingScenario=null;r.reasons.push(r.dsEligibility.reason);}else r.reasons.push(r.dsEligibility.reason);}}
  return ledger;
 }
 
