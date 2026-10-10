@@ -1,3 +1,4 @@
+import {normalizeForecast} from './forecast.js';
 // This module prepares the newly supplied policy inputs. It never chooses the
 // unresolved reported-share definition for users. Work bonus is a confirmed separate input.
 export const POLICY_NOTICE='사용자 제공 15시 공개 내용의 입력·검토본입니다. 회사 미확인 조건을 명시적 가정으로 선택해 총보상·현금흐름을 추정합니다. 실제 입고주수·최종 납부액은 확정값이 아닙니다.';
@@ -8,11 +9,11 @@ const yearFields=['taxSettlementYearByOrigin','insuranceSettlementYearByOrigin',
 // The public planner keeps OPI1/OPI2 and fixes donation at zero.
 // Old hidden policy choices are discarded, never multiplied into a manual award.
 export function normalizeSimpleState(s){
- const old=s.opi2Policy??{}, gross={}, donation=0;
+ normalizeForecast(s);for(const person of s.people??[])person.includeAllowance=false;const old=s.opi2Policy??{}, gross={}, donation=0;
  const p=policyDefaults();Object.assign(p,{simpleInput:true,manualGrossByYear:gross,donationRate:donation,taxWithholdingBase:'gross',insuranceWithholdingBase:'gross'});
  const price=s.people?.[0]?.psuPrice>0?s.people[0].psuPrice:250000;
  for(let y=s.dataStartYear;y<=s.endYear;y++){
-  p.gradeByYear[y]='CL3';p.workBonusByYear[y]=0;p.paymentDateByYear[y]=(y+1)+'-04-01';p.expectedPaymentYearByYear[y]=y+1;
+  p.gradeByYear[y]='CL3';p.workBonusByYear[y]=old.workBonusByYear?.[y]??0;p.paymentDateByYear[y]=(y+1)+'-04-01';p.expectedPaymentYearByYear[y]=y+1;
   for(const key of ['vwapWeekByYear','vwapMonthByYear','vwapTwoMonthsByYear','closingPriceByYear'])p[key][y]=price;
  }
  if(old.donationRate)s.migrationNotice='구형 기부 비율은 적용하지 않으며 기부금은 0원으로 고정합니다.';if(Object.keys(old.manualGrossByYear??{}).length)s.migrationNotice='구형 특별성과급 직접 금액은 제외하고 연봉·소속·연수·영업이익으로 자동 계산합니다.';s.opi2Policy=p;Object.assign(s.settings,{opi2Base:540000000,performanceBase:300,salaryBase:85000000,coefficients:{'메모리':1,'공통':.7,'파운드리·시스템LSI':.3},studyCoefficient:.5});s.settings.opi2Delay=1;s.settings.opi2PayYears={};return s;

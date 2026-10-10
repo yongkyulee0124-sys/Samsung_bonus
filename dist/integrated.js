@@ -101,7 +101,7 @@ export function exportIntegrated(s){
  if(!s.opi2Policy.simpleInput)return exportDetailedIntegrated(s);
  const clean=normalizeSimpleState(clone(s)),d=exportDetailedIntegrated(clean),simple={simpleInput:true,manualGrossByYear:clone(clean.opi2Policy.manualGrossByYear),donationRate:clean.opi2Policy.donationRate};
  d.input.opi2Policy=simple;
- d.assumptions.policy={...simple,workBonus:0,withholdingTaxRate:.495,withholdingInsuranceRate:.04967,withholdingBase:'gross',donationBase:'gross',price:clean.people[0].psuPrice>0?clean.people[0].psuPrice:250000,priceAssumption:'하나의 평가가격 유지',paymentAssumption:'성과 다음 해 4월 1일 예정',stockRelease:'지급해/1년 뒤/2년 뒤 각 1/3',cashSettlement:'과세 다음 해 현금 정산',manualAward:'고과·소속·연수 등이 이미 반영된 최종 세전액; 추가 배수 없음'};
+ d.assumptions.policy={...simple,workBonusByYear:clone(clean.opi2Policy.workBonusByYear),withholdingTaxRate:.495,withholdingInsuranceRate:.04967,withholdingBase:'gross',donationBase:'gross',price:clean.people[0].psuPrice>0?clean.people[0].psuPrice:250000,priceAssumption:'하나의 평가가격 유지',paymentAssumption:'성과 다음 해 4월 1일 예정',stockRelease:'지급해/1년 뒤/2년 뒤 각 1/3',cashSettlement:'과세 다음 해 현금 정산',manualAward:'고과·소속·연수 등이 이미 반영된 최종 세전액; 추가 배수 없음'};
  d.specialCompensation=d.opi2PolicyReview.rows.map(r=>({year:r.originYear,inputMethod:r.inputMethod,gross:r.preliminaryGross,zeroReason:r.zeroReason}));delete d.opi2PolicyReview;
  d.disclaimer='예상치이며 실제 지급액·세금과 다를 수 있음. 연간 소득 합산 누진세 추정, 다음해 지급과 현금 정산, 단일 평가가격 유지 가정. 생활비·부동산 비용은 차감하지 않은 총유입액.';
  return JSON.parse(JSON.stringify(d,(k,v)=>['policyRow','withholdingAlternatives','shareIncomeCandidates'].includes(k)?undefined:v));

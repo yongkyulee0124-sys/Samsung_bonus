@@ -1,5 +1,5 @@
 {
-  "model": "automatic_opi1_opi2_dashboard",
+  "model": "automatic_opi1_opi2_psu_dashboard",
   "defaultPerformance": {
     "2026": 370,
     "2027": 550,
@@ -10,12 +10,12 @@
   "donationRate": 0,
   "scenarios": {
     "middle": {
-      "scope": "OPI1+OPI2",
+      "scope": "OPI1+OPI2+PSU",
       "totals": {
-        "grossAccrual": 3592519662,
-        "netAccrual": 1936277209,
-        "netLiquid": 1131445518,
-        "netLiquidBeforeSettlement": 968159888,
+        "grossAccrual": 3742519662,
+        "netAccrual": 2016740148,
+        "netLiquid": 1211908457,
+        "netLiquidBeforeSettlement": 1048622827,
         "taxSettlementInPeriod": 163292860,
         "insuranceSettlementInPeriod": -7230,
         "taxRefundInPeriod": 163292860,
@@ -28,6 +28,7 @@
           "year": 2026,
           "opi1": 0,
           "opi2": 0,
+          "psu": 0,
           "beforeSettlement": 0,
           "taxSettlement": 0,
           "insuranceSettlement": 0,
@@ -38,6 +39,7 @@
           "year": 2027,
           "opi1": 23590964,
           "opi2": 70758282,
+          "psu": 0,
           "beforeSettlement": 94349246,
           "taxSettlement": 0,
           "insuranceSettlement": 0,
@@ -48,31 +50,34 @@
           "year": 2028,
           "opi1": 23986266,
           "opi2": 181198574,
-          "beforeSettlement": 205184840,
+          "psu": 26875369,
+          "beforeSettlement": 232060209,
           "taxSettlement": 46505945,
           "insuranceSettlement": -1784,
-          "afterSettlement": 251689001,
-          "cumulative": 346038247
+          "afterSettlement": 278564370,
+          "cumulative": 372913616
         },
         {
           "year": 2029,
           "opi1": 25179290,
           "opi2": 286618852,
-          "beforeSettlement": 311798142,
+          "psu": 26868655,
+          "beforeSettlement": 338666797,
           "taxSettlement": 59799155,
           "insuranceSettlement": -2786,
-          "afterSettlement": 371594511,
-          "cumulative": 717632758
+          "afterSettlement": 398463166,
+          "cumulative": 771376782
         },
         {
           "year": 2030,
           "opi1": 26290912,
           "opi2": 330536748,
-          "beforeSettlement": 356827660,
+          "psu": 26718915,
+          "beforeSettlement": 383546575,
           "taxSettlement": 56987760,
           "insuranceSettlement": -2660,
-          "afterSettlement": 413812760,
-          "cumulative": 1131445518
+          "afterSettlement": 440531675,
+          "cumulative": 1211908457
         }
       ],
       "accrual": [
@@ -80,6 +85,7 @@
           "year": 2026,
           "opi1": 42500000,
           "opi2": 466200000,
+          "psu": 0,
           "grossTotal": 508700000,
           "netTotal": 282369971
         },
@@ -87,6 +93,7 @@
           "year": 2027,
           "opi1": 44625000,
           "opi2": 727650000,
+          "psu": 0,
           "grossTotal": 772275000,
           "netTotal": 415103509
         },
@@ -94,22 +101,25 @@
           "year": 2028,
           "opi1": 46856250,
           "opi2": 694575000,
-          "grossTotal": 741431250,
-          "netTotal": 398425225
+          "psu": 50000000,
+          "grossTotal": 791431250,
+          "netTotal": 425300594
         },
         {
           "year": 2029,
           "opi1": 49199063,
           "opi2": 755558685,
-          "grossTotal": 804757748,
-          "netTotal": 430045080
+          "psu": 50000000,
+          "grossTotal": 854757748,
+          "netTotal": 456913735
         },
         {
           "year": 2030,
           "opi1": 51659016,
           "opi2": 713696648,
-          "grossTotal": 765355664,
-          "netTotal": 410333424
+          "psu": 50000000,
+          "grossTotal": 815355664,
+          "netTotal": 437052339
         }
       ],
       "closing": {
@@ -178,196 +188,20 @@
       },
       "accounting": {
         "opening": 0,
-        "netAccrual": 1936277209,
-        "netLiquid": 1131445518,
+        "netAccrual": 2016740148,
+        "netLiquid": 1211908457,
         "closingStock": 659740129,
         "closingCash": 145091562,
         "difference": 0
       }
     },
-    "downturn": {
-      "scope": "OPI1+OPI2",
-      "totals": {
-        "grossAccrual": 2142385977,
-        "netAccrual": 1165111966,
-        "netLiquid": 754778542,
-        "netLiquidBeforeSettlement": 648478012,
-        "taxSettlementInPeriod": 106305100,
-        "insuranceSettlementInPeriod": -4570,
-        "taxRefundInPeriod": 106305100,
-        "taxExtraPaymentInPeriod": 0,
-        "settlementInPeriod": 106300530,
-        "donation": 0
-      },
-      "annual": [
-        {
-          "year": 2026,
-          "opi1": 0,
-          "opi2": 0,
-          "beforeSettlement": 0,
-          "taxSettlement": 0,
-          "insuranceSettlement": 0,
-          "afterSettlement": 0,
-          "cumulative": 0
-        },
-        {
-          "year": 2027,
-          "opi1": 23590964,
-          "opi2": 70758282,
-          "beforeSettlement": 94349246,
-          "taxSettlement": 0,
-          "insuranceSettlement": 0,
-          "afterSettlement": 94349246,
-          "cumulative": 94349246
-        },
-        {
-          "year": 2028,
-          "opi1": 23986266,
-          "opi2": 181198574,
-          "beforeSettlement": 205184840,
-          "taxSettlement": 46505945,
-          "insuranceSettlement": -1784,
-          "afterSettlement": 251689001,
-          "cumulative": 346038247
-        },
-        {
-          "year": 2029,
-          "opi1": 28128384,
-          "opi2": 181198573,
-          "beforeSettlement": 209326957,
-          "taxSettlement": 59799155,
-          "insuranceSettlement": -2786,
-          "afterSettlement": 269123326,
-          "cumulative": 615161573
-        },
-        {
-          "year": 2030,
-          "opi1": 29176678,
-          "opi2": 110440291,
-          "beforeSettlement": 139616969,
-          "taxSettlement": 0,
-          "insuranceSettlement": 0,
-          "afterSettlement": 139616969,
-          "cumulative": 754778542
-        }
-      ],
-      "accrual": [
-        {
-          "year": 2026,
-          "opi1": 42500000,
-          "opi2": 466200000,
-          "grossTotal": 508700000,
-          "netTotal": 282369971
-        },
-        {
-          "year": 2027,
-          "opi1": 44625000,
-          "opi2": 727650000,
-          "grossTotal": 772275000,
-          "netTotal": 415103509
-        },
-        {
-          "year": 2028,
-          "opi1": 46856250,
-          "opi2": 0,
-          "grossTotal": 46856250,
-          "netTotal": 28128384
-        },
-        {
-          "year": 2029,
-          "opi1": 49199063,
-          "opi2": 0,
-          "grossTotal": 49199063,
-          "netTotal": 29176678
-        },
-        {
-          "year": 2030,
-          "opi1": 51659016,
-          "opi2": 713696648,
-          "grossTotal": 765355664,
-          "netTotal": 410333424
-        }
-      ],
-      "closing": {
-        "unpaidStock": 324967494,
-        "paidLockedStock": 0,
-        "normalUnpaidCash": 27696171,
-        "settlementAfterPeriod": 57669759,
-        "settlementReceivable": 57672493,
-        "settlementPayable": 2734,
-        "settlementEvents": [
-          {
-            "id": "1:2029:opi2:tax",
-            "origin": 2029,
-            "payYear": 2030,
-            "year": 2031,
-            "type": "settlement",
-            "kind": "tax",
-            "estimatedMonth": 2,
-            "timingAssumption": "과세 다음 해 2월 계산용 가정 · 삼성 확정 입금일 아님",
-            "net": 0,
-            "gross": 0,
-            "assumptionOnly": true
-          },
-          {
-            "id": "1:2029:opi2:insurance",
-            "origin": 2029,
-            "payYear": 2030,
-            "year": 2031,
-            "type": "settlement",
-            "kind": "insurance",
-            "estimatedMonth": 4,
-            "timingAssumption": "지급 다음 해 4월 보험 차액 정산 가정 · 회사 실제 일정 미확인",
-            "net": 0,
-            "gross": 0,
-            "assumptionOnly": true
-          },
-          {
-            "id": "1:2030:opi2:tax",
-            "origin": 2030,
-            "payYear": 2031,
-            "year": 2032,
-            "type": "settlement",
-            "kind": "tax",
-            "estimatedMonth": 2,
-            "timingAssumption": "과세 다음 해 2월 계산용 가정 · 삼성 확정 입금일 아님",
-            "net": 57672493,
-            "gross": 57672493,
-            "assumptionOnly": true
-          },
-          {
-            "id": "1:2030:opi2:insurance",
-            "origin": 2030,
-            "payYear": 2031,
-            "year": 2032,
-            "type": "settlement",
-            "kind": "insurance",
-            "estimatedMonth": 4,
-            "timingAssumption": "지급 다음 해 4월 보험 차액 정산 가정 · 회사 실제 일정 미확인",
-            "net": -2734,
-            "gross": -2734,
-            "assumptionOnly": true
-          }
-        ],
-        "totalStock": 324967494,
-        "unpaidCash": 85365930
-      },
-      "accounting": {
-        "opening": 0,
-        "netAccrual": 1165111966,
-        "netLiquid": 754778542,
-        "closingStock": 324967494,
-        "closingCash": 85365930,
-        "difference": 0
-      }
-    },
     "custom": {
-      "scope": "OPI1+OPI2",
+      "scope": "OPI1+OPI2+PSU",
       "totals": {
-        "grossAccrual": 3592519662,
-        "netAccrual": 1936277209,
-        "netLiquid": 1131445518,
-        "netLiquidBeforeSettlement": 968159888,
+        "grossAccrual": 3742519662,
+        "netAccrual": 2016740148,
+        "netLiquid": 1211908457,
+        "netLiquidBeforeSettlement": 1048622827,
         "taxSettlementInPeriod": 163292860,
         "insuranceSettlementInPeriod": -7230,
         "taxRefundInPeriod": 163292860,
@@ -380,6 +214,7 @@
           "year": 2026,
           "opi1": 0,
           "opi2": 0,
+          "psu": 0,
           "beforeSettlement": 0,
           "taxSettlement": 0,
           "insuranceSettlement": 0,
@@ -390,6 +225,7 @@
           "year": 2027,
           "opi1": 23590964,
           "opi2": 70758282,
+          "psu": 0,
           "beforeSettlement": 94349246,
           "taxSettlement": 0,
           "insuranceSettlement": 0,
@@ -400,31 +236,34 @@
           "year": 2028,
           "opi1": 23986266,
           "opi2": 181198574,
-          "beforeSettlement": 205184840,
+          "psu": 26875369,
+          "beforeSettlement": 232060209,
           "taxSettlement": 46505945,
           "insuranceSettlement": -1784,
-          "afterSettlement": 251689001,
-          "cumulative": 346038247
+          "afterSettlement": 278564370,
+          "cumulative": 372913616
         },
         {
           "year": 2029,
           "opi1": 25179290,
           "opi2": 286618852,
-          "beforeSettlement": 311798142,
+          "psu": 26868655,
+          "beforeSettlement": 338666797,
           "taxSettlement": 59799155,
           "insuranceSettlement": -2786,
-          "afterSettlement": 371594511,
-          "cumulative": 717632758
+          "afterSettlement": 398463166,
+          "cumulative": 771376782
         },
         {
           "year": 2030,
           "opi1": 26290912,
           "opi2": 330536748,
-          "beforeSettlement": 356827660,
+          "psu": 26718915,
+          "beforeSettlement": 383546575,
           "taxSettlement": 56987760,
           "insuranceSettlement": -2660,
-          "afterSettlement": 413812760,
-          "cumulative": 1131445518
+          "afterSettlement": 440531675,
+          "cumulative": 1211908457
         }
       ],
       "accrual": [
@@ -432,6 +271,7 @@
           "year": 2026,
           "opi1": 42500000,
           "opi2": 466200000,
+          "psu": 0,
           "grossTotal": 508700000,
           "netTotal": 282369971
         },
@@ -439,6 +279,7 @@
           "year": 2027,
           "opi1": 44625000,
           "opi2": 727650000,
+          "psu": 0,
           "grossTotal": 772275000,
           "netTotal": 415103509
         },
@@ -446,22 +287,25 @@
           "year": 2028,
           "opi1": 46856250,
           "opi2": 694575000,
-          "grossTotal": 741431250,
-          "netTotal": 398425225
+          "psu": 50000000,
+          "grossTotal": 791431250,
+          "netTotal": 425300594
         },
         {
           "year": 2029,
           "opi1": 49199063,
           "opi2": 755558685,
-          "grossTotal": 804757748,
-          "netTotal": 430045080
+          "psu": 50000000,
+          "grossTotal": 854757748,
+          "netTotal": 456913735
         },
         {
           "year": 2030,
           "opi1": 51659016,
           "opi2": 713696648,
-          "grossTotal": 765355664,
-          "netTotal": 410333424
+          "psu": 50000000,
+          "grossTotal": 815355664,
+          "netTotal": 437052339
         }
       ],
       "closing": {
@@ -530,8 +374,8 @@
       },
       "accounting": {
         "opening": 0,
-        "netAccrual": 1936277209,
-        "netLiquid": 1131445518,
+        "netAccrual": 2016740148,
+        "netLiquid": 1211908457,
         "closingStock": 659740129,
         "closingCash": 145091562,
         "difference": 0
